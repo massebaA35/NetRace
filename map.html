@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script>
+        <script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#122131", "on-tertiary-fixed-variant": "#004e5c", "on-surface-variant": "#c2c6d6", "on-secondary-fixed": "#00174b", "on-error": "#690005", "surface-container-high": "#1c2b3c", "surface-container-lowest": "#010f1f", "tertiary-fixed": "#acedff", "outline": "#8c909f", "surface-bright": "#2c3a4c", "on-tertiary": "#003640", "surface-tint": "#adc6ff", "on-tertiary-fixed": "#001f26", "on-surface": "#d4e4fa", "primary-container": "#4d8eff", "on-secondary": "#002a78", "on-secondary-fixed-variant": "#003ea8", "on-primary-fixed-variant": "#004395", "secondary-container": "#0053db", "error": "#ffb4ab", "inverse-on-surface": "#233143", "surface-container-highest": "#273647", "tertiary-container": "#009eb9", "on-tertiary-container": "#002f38", "outline-variant": "#424754", "inverse-surface": "#d4e4fa", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "secondary": "#b4c5ff", "primary-fixed-dim": "#adc6ff", "tertiary-fixed-dim": "#4cd7f6", "on-secondary-container": "#cdd7ff", "surface": "#051424", "secondary-fixed-dim": "#b4c5ff", "surface-variant": "#273647", "background": "#051424", "on-primary-fixed": "#001a42", "on-background": "#d4e4fa", "tertiary": "#4cd7f6", "on-primary": "#002e6a", "primary": "#adc6ff", "secondary-fixed": "#dbe1ff", "on-primary-container": "#00285d", "inverse-primary": "#005ac2", "on-error-container": "#ffdad6", "error-container": "#93000a", "primary-fixed": "#d8e2ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "3rem", "gutter-default": "1rem", "space-md": "1rem", "gutter-expanded": "1.5rem", "space-xl": "2rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "gutter-compact": "0.75rem", "space-xs": "0.5rem", "space-2xs": "0.25rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Geist" ], "body-lg": [ "Inter" ], "headline-sm": [ "Geist" ], "label-sm": [ "JetBrains Mono" ], "headline-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ] }, "fontSize": { "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "500" } ], "display-lg": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ], "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md">
+                <div class="px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-[0_0_12px_rgba(77,142,255,0.25)]"><span class="material-symbols-outlined text-[24px]">radar</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">NetTrace AI</span><span class="font-label-sm text-label-sm text-tertiary tracking-wider font-semibold uppercase">TACTICAL CORE</span></div></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="home.html"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="upload-case" href="upload.html"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-body-md text-body-md flex-1">Upload Case</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="network-explorer" href="netexp.html"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md flex-1">Network Explorer</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="connection-finder" href="confind.html"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-body-md text-body-md flex-1">Connection Finder</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="timeline" href="timeline.html"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md flex-1">Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="evidence" href="evidenceq.html"><span class="material-symbols-outlined text-[20px]">lock_clock</span><span class="font-body-md text-body-md flex-1">Evidence</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]" data-path="geographic-map" href="map.html"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md flex-1">Geographic Map</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md flex-1">AI Assistant</span><span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary">ONLINE</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports" href="report.html"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md flex-1">Reports</span></a></nav></div><div class="px-space-xs flex flex-col gap-space-xs"><nav class="flex flex-col" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md flex-1">Settings</span></a></nav><div class="mx-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">SECNET V4.2 ENCRYPTED</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between gap-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex-1 max-w-xl"><div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search person, phone, vehicle, location or case..." type="text"/><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span class="font-semibold">⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_rgba(77,142,255,0.8)]"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm px-space-xs py-space-2xs rounded-lg bg-surface-container-low"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Agent Miller</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Investigator - Analyst</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-md"><div class="flex flex-col w-full gap-space-md">
+<!-- Top Context Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs text-tertiary font-label-sm text-label-sm font-semibold tracking-wider uppercase">
+<span class="w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_currentColor]"></span>
+<span>TACTICAL SPATIAL TELEMETRY • LIVE RECON FEED</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold mt-space-2xs">Geographic Investigation</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-3xl">Spatial analysis of geo-tagged intercepts, vehicle telemetry, surveillance checkpoints, and meeting locations.</p>
+</div>
+<!-- Quick Meta HUD Badges -->
+<div class="flex items-center gap-space-xs flex-wrap">
+<div class="px-space-sm py-space-2xs rounded-lg bg-surface-container flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">satellite_alt</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">SATELLITE SYNC:</span>
+<span class="font-code-md text-code-md text-tertiary font-semibold">LEO-NORAD 99.4%</span>
+</div>
+<div class="px-space-sm py-space-2xs rounded-lg bg-surface-container flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">polyline</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">VECTORS:</span>
+<span class="font-code-md text-code-md text-primary font-semibold">14 ACTIVE PINGS</span>
+</div>
+<button class="px-space-sm py-space-2xs rounded-lg bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface flex items-center gap-space-2xs font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span>Sync Feeds</span>
+</button>
+</div>
+</div>
+<!-- Operational Filter & Query Console -->
+<div class="bg-surface-container-low rounded-xl p-space-sm flex flex-col xl:flex-row gap-space-sm items-stretch xl:items-center justify-between">
+<div class="flex flex-wrap items-center gap-space-xs flex-1">
+<!-- Case Filter Selector -->
+<div class="relative min-w-[240px]">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-primary text-[18px]">folder_special</span>
+<div class="flex flex-col text-left leading-none flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">CASE SCOPE</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">Case #408 - Syndicate Wire</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Entity Filter Dropdown -->
+<div class="relative min-w-[280px]">
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-lg text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[18px]">groups</span>
+<div class="flex flex-col text-left leading-none flex-1">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">ENTITIES</span>
+<span class="font-body-sm text-body-sm font-semibold truncate">All Entities (David Chen, Sedan, Phone SIM...)</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">expand_more</span>
+</div>
+</div>
+<!-- Layer Toggles -->
+<div class="flex items-center gap-space-2xs bg-surface-container p-space-2xs rounded-lg flex-wrap">
+<button class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-md bg-surface-container-highest text-primary font-label-sm text-label-sm transition-all shadow-[0_0_8px_rgba(77,142,255,0.25)]" id="toggle-checkpoints">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span>Checkpoints</span>
+</button>
+<button class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-md bg-surface-container-highest text-tertiary font-label-sm text-label-sm transition-all" id="toggle-alpr">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+<span>ALPR Pings</span>
+</button>
+<button class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-md bg-surface-container-highest text-secondary font-label-sm text-label-sm transition-all" id="toggle-celltowers">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span>Cell Towers</span>
+</button>
+<button class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-md hover:bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm transition-all" id="toggle-geofence">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span>Geofence Bounds</span>
+</button>
+</div>
+</div>
+<!-- Location Waypoint Search Input -->
+<div class="relative min-w-[320px] max-w-md">
+<div class="flex items-center bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">location_searching</span>
+<input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search coordinates, address, waypoint..." type="text" value="37.7941° N, 122.3956° W"/>
+<button class="flex items-center justify-center p-space-2xs rounded bg-surface-container-high text-on-surface-variant hover:text-primary transition-colors ml-space-xs">
+<span class="material-symbols-outlined text-[16px]">travel_explore</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Tactical Cartographic Canvas Section -->
+<div class="relative w-full h-[680px] rounded-xl overflow-hidden bg-surface-container-lowest flex flex-col shadow-2xl">
+<!-- Real-world Tactical Map Integration Target (data-location compliant) -->
+<div class="absolute inset-0 w-full h-full opacity-20 filter contrast-150 brightness-50 mix-blend-luminosity" data-location="San Francisco Financial District Embarcadero Piers" style=""></div>
+<!-- Precision Tactical Vector Graphics Overlay (Dark Grid, Coastlines, Routes, Pings) -->
+<div class="absolute inset-0 pointer-events-none">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 1200 680" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<pattern height="40" id="tactical-grid" patternunits="userSpaceOnUse" width="40">
+<path class="text-surface-container-high/40" d="M 40 0 L 0 0 0 40" fill="none" stroke="currentColor" stroke-width="0.75"></path>
+<circle class="text-tertiary/30" cx="0" cy="0" fill="currentColor" r="1"></circle>
+</pattern>
+<pattern height="200" id="macro-grid" patternunits="userSpaceOnUse" width="200">
+<path class="text-surface-container-highest/50" d="M 200 0 L 0 0 0 200" fill="none" stroke="currentColor" stroke-dasharray="2 6" stroke-width="1.2"></path>
+</pattern></defs>
+<!-- Dynamic Tactical Grid Background -->
+<rect fill="url(#tactical-grid)" height="100%" width="100%"></rect>
+<rect fill="url(#macro-grid)" height="100%" width="100%"></rect>
+<!-- Topo & Shoreline Cartographic Contours -->
+<path class="text-surface-container-low/60" d="M 0,220 Q 280,240 450,190 T 780,280 T 1200,210 L 1200,680 L 0,680 Z" fill="currentColor"></path>
+<path class="text-primary/20" d="M 120,680 C 250,540 380,470 540,430 C 690,390 840,320 1020,310 L 1200,320" fill="none" stroke="currentColor" stroke-dasharray="4 8" stroke-width="2"></path>
+<!-- Waterway Shipping Channel Marking -->
+<path class="text-tertiary-container/30" d="M 50,140 C 250,120 540,80 820,110 T 1200,90" fill="none" stroke="currentColor" stroke-dasharray="6 6" stroke-width="1.5"></path>
+<text class="text-tertiary/40 font-code-md text-[10px] tracking-widest uppercase" fill="currentColor" x="600" y="70">BAY CORRIDOR TRANSIT SECTOR 04</text>
+<!-- Transit Corridor Track 1: Safehouse (Pin C: 320, 480) -> Apex Tower (Pin B: 580, 360) -->
+<path class="text-secondary-container" d="M 320 480 L 410 440 L 490 410 L 580 360" fill="none" stroke="currentColor" stroke-dasharray="8 6" stroke-linecap="round" stroke-width="3"></path>
+<!-- Transit Corridor Track 2: Apex Tower (Pin B: 580, 360) -> Pier 14 Logistics (Pin A: 760, 240) -->
+<path class="text-primary-container" d="M 580 360 L 640 320 L 710 270 L 760 240" fill="none" stroke="currentColor" stroke-dasharray="8 5" stroke-linecap="round" stroke-width="3.5"></path>
+<!-- Pulse Transit Streamers -->
+<circle class="text-primary" cx="680" cy="285" fill="currentColor" r="4">
+<animate attributename="opacity" dur="1.8s" repeatcount="indefinite" values="0.2;1;0.2"></animate>
+</circle>
+<circle class="text-tertiary" cx="450" cy="425" fill="currentColor" r="3.5">
+<animate attributename="opacity" dur="2.4s" repeatcount="indefinite" values="0.3;1;0.3"></animate>
+</circle>
+<!-- Geofence Zone Vector Envelope around Waterfront (Pier 14) -->
+<polygon class="text-primary/40" fill="currentColor" points="710,180 860,190 890,300 730,310" stroke="currentColor" stroke-dasharray="4 4" stroke-width="1"></polygon>
+<text class="text-primary/60 font-code-md text-[9px] tracking-widest uppercase" fill="currentColor" x="735" y="195">GEOFENCE CA-SF-PIER14 [RESTRICTED]</text>
+<!-- Geofence Envelope Safehouse Zone -->
+<polygon class="text-error/30" fill="currentColor" points="270,440 370,440 380,530 260,520" stroke="currentColor" stroke-dasharray="3 3" stroke-width="1"></polygon>
+</svg>
+</div>
+<!-- Map Compass & Telemetry Axis Markers -->
+<div class="absolute top-4 left-4 pointer-events-none flex flex-col gap-space-2xs z-10">
+<div class="flex items-center gap-space-xs bg-surface-container/90 backdrop-blur-md px-space-sm py-space-2xs rounded-md shadow-md">
+<span class="material-symbols-outlined text-primary text-[18px]">explore</span>
+<span class="font-code-md text-code-md text-on-surface font-semibold">GRID: WGS-84 / UTM ZONE 10S</span>
+</div>
+<div class="font-code-md text-label-sm text-on-surface-variant/80 px-space-2xs">
+        CAM: 37°47'38.7"N 122°23'44.2"W • AZIMUTH 034° • ELV 450M
+      </div>
+</div>
+<!-- INTERACTIVE MAP PINS -->
+<!-- PIN C: Emerald (Safehouse Warehouse #14) -->
+<div class="absolute top-[460px] left-[300px] z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer" onclick="selectPin('safehouse')">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 rounded-full bg-tertiary-container/30 animate-ping"></span>
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-tertiary shadow-[0_0_14px_rgba(0,158,185,0.8)] transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]">warehouse</span>
+</div>
+<div class="absolute top-10 whitespace-nowrap px-space-xs py-space-2xs rounded bg-surface-container-high/90 backdrop-blur-sm text-tertiary font-label-sm text-label-sm shadow-md flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span>Safehouse Warehouse #14</span>
+</div>
+</div>
+</div>
+<!-- PIN B: Amber (Financial District Apex Tower) -->
+<div class="absolute top-[340px] left-[560px] z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer" onclick="selectPin('apex')">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-12 h-12 rounded-full bg-secondary-container/40 animate-ping" style="animation-duration: 2.6s;"></span>
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-secondary shadow-[0_0_16px_rgba(180,197,255,0.7)] transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div class="absolute bottom-11 whitespace-nowrap px-space-xs py-space-2xs rounded bg-surface-container-high/90 backdrop-blur-sm text-secondary font-label-sm text-label-sm shadow-md flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Financial District Apex Tower</span>
+</div>
+</div>
+</div>
+<!-- PIN D: Magenta / High Alert (Cell Tower Apex West Sector) -->
+<div class="absolute top-[160px] left-[340px] z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer" onclick="selectPin('celltower')">
+<div class="relative flex items-center justify-center">
+<span class="absolute w-10 h-10 rounded-full bg-error-container/30 animate-pulse"></span>
+<div class="w-9 h-9 rounded-full bg-surface-container-highest flex items-center justify-center text-error shadow-[0_0_12px_rgba(255,180,171,0.6)] transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined text-[18px]">cell_tower</span>
+</div>
+<div class="absolute top-10 whitespace-nowrap px-space-xs py-space-2xs rounded bg-surface-container-high/90 backdrop-blur-sm text-error font-label-sm text-label-sm shadow-md flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Cell Tower Apex West Sector</span>
+</div>
+</div>
+</div>
+<!-- PIN A: Selected / Highlighted Vibrant Blue with radar glow (Pier 14 Logistics Dock) -->
+<div class="absolute top-[220px] left-[740px] z-30 -translate-x-1/2 -translate-y-1/2 group cursor-pointer" id="pin-dock" onclick="selectPin('dock')">
+<div class="relative flex items-center justify-center">
+<!-- Pulse Radar Rings -->
+<span class="absolute w-20 h-20 rounded-full bg-primary-container/20 animate-ping" style="animation-duration: 2s;"></span>
+<span class="absolute w-14 h-14 rounded-full bg-primary-container/30 animate-pulse"></span>
+<div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-[0_0_24px_rgba(77,142,255,0.9)] scale-110 transition-transform">
+<span class="material-symbols-outlined text-[24px]">anchor</span>
+</div>
+<!-- Target Reticle Overlay -->
+<div class="absolute -top-10 whitespace-nowrap px-space-sm py-space-2xs rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-sm font-semibold shadow-xl flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px]">my_location</span>
+<span>SELECTED: Pier 14 Logistics Dock</span>
+</div>
+</div>
+</div>
+<!-- Contextual Telemetry Marker Pin: ALPR Ping along Route -->
+<div class="absolute top-[280px] left-[650px] z-20 -translate-x-1/2 -translate-y-1/2 group cursor-pointer">
+<div class="w-7 h-7 rounded-full bg-surface-container-high flex items-center justify-center text-tertiary shadow-[0_0_8px_rgba(76,215,246,0.6)]">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+</div>
+<div class="opacity-0 group-hover:opacity-100 transition-opacity absolute bottom-8 left-1/2 -translate-x-1/2 px-space-xs py-space-2xs rounded bg-surface-container-lowest text-on-surface font-code-md text-[10px] whitespace-nowrap shadow-xl">
+        ALPR CAM #104 [PASS: CA 8XYZ21]
+      </div>
+</div>
+<!-- Floating Investigation Card: Selected Location Detail -->
+<div class="absolute top-4 right-4 z-40 w-96 max-w-[calc(100%-2rem)] bg-surface-container/95 backdrop-blur-xl rounded-xl shadow-2xl overflow-hidden flex flex-col transition-all" id="location-detail-panel">
+<!-- Card Banner / Classification Header -->
+<div class="bg-surface-container-high px-space-md py-space-xs flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">share_location</span>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-wider font-semibold">TACTICAL TARGET DOSSIER</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">HOTSPOT PRIORITY 1</span>
+</div>
+</div>
+<!-- Main Panel Content -->
+<div class="p-space-md flex flex-col gap-space-sm">
+<!-- Title & Coordinates -->
+<div class="flex flex-col">
+<div class="flex items-baseline justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold" id="panel-title">Pier 14 Logistics Dock</h2>
+<span class="font-code-md text-code-md text-tertiary font-semibold">SECTOR 4</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant font-code-md text-code-md mt-space-2xs">
+<span class="material-symbols-outlined text-[16px] text-primary">pin_drop</span>
+<span id="panel-coords">37.7941° N, 122.3956° W</span>
+<button class="hover:text-on-surface transition-colors" title="Copy coordinates">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Surveillance Snapshot / Photographic Feed Placeholder -->
+<div class="relative w-full h-28 rounded-lg overflow-hidden bg-surface-container-lowest">
+<img class="w-full h-full object-cover" data-alt="High-resolution tactical nighttime harbor surveillance capture showing Pier 14 logistics dock with shipping containers, security floodlights, industrial cranes, dark blue ambient fog, and parked dark sedan under perimeter lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNC4Z__y_Q-Rg6zUPRiSxqp-oMwf2l03afSSyvVGaVy3e5PumPqucIqX-j8L9_m8vDr3dRA19dy_5YwljXRGANiH5az_O5J7ocQVFQkDlWOtrqGgWwm_C0zO6O-I8p7qfDA0X1TXM_2qzsieY1rNjJ4HhPK-6PtwuYCJxwf_kFlMvvHIlB864hGGY_GOfkrcTj1i29kqrAUtbELWmvYK5fPohAG-731DS_ZD6EzK1qER1z_UQSsSoZ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container via-transparent to-transparent"></div>
+<div class="absolute bottom-2 left-2 px-space-2xs py-0.5 rounded bg-surface-container-lowest/80 backdrop-blur-sm text-tertiary font-code-md text-[10px] flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+<span>LIVE FLIR FEED: CAM-04-NORTH</span>
+</div>
+</div>
+<!-- Related Cases & Entities Grid -->
+<div class="grid grid-cols-2 gap-space-xs">
+<div class="bg-surface-container-low p-space-xs rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">RELATED CASES</span>
+<div class="flex items-center gap-space-2xs mt-space-2xs flex-wrap">
+<span class="px-space-2xs py-0.5 rounded bg-surface-container-highest text-primary font-code-md text-label-sm font-semibold">Case #408</span>
+<span class="px-space-2xs py-0.5 rounded bg-surface-container-highest text-secondary font-code-md text-label-sm">Case #392</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-xs rounded-lg flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">SURVEILLANCE PINGS</span>
+<div class="flex items-baseline gap-space-2xs mt-space-2xs">
+<span class="font-headline-sm text-headline-sm text-tertiary font-bold">14</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Geofence hits</span>
+</div>
+</div>
+</div>
+<!-- Related Entities List -->
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">CORRELATED TARGETS</span>
+<div class="flex flex-col gap-space-2xs bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">person</span>
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">David Chen</span>
+</div>
+<span class="px-space-2xs py-0.5 rounded bg-surface-container-highest text-primary font-label-sm text-label-sm">Target #1</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">person</span>
+<span class="font-body-sm text-body-sm text-on-surface">Elena Rostova</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">Associate</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px]">directions_car</span>
+<span class="font-code-md text-body-sm text-on-surface font-semibold">Sedan [CA 8XYZ21]</span>
+</div>
+<span class="px-space-2xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm">Vehicle Intercept</span>
+</div>
+</div>
+</div>
+<!-- Recent Activity Telemetry Log -->
+<div class="bg-surface-container-low p-space-xs rounded-lg flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">RECENT INTERCEPT EVENT</span>
+<div class="flex items-start gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[18px] shrink-0 mt-0.5">radiology</span>
+<div class="flex flex-col text-left">
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Automated License Plate Read (ALPR)</span>
+<span class="font-code-md text-label-sm text-on-surface-variant">Recorded today at 22:30 EDT • Stationary 18m</span>
+</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="flex items-center gap-space-xs pt-space-2xs">
+<a class="flex-1 bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold py-space-xs px-space-sm rounded-lg transition-colors flex items-center justify-center gap-space-xs shadow-[0_0_12px_rgba(77,142,255,0.4)]" data-path="network-explorer" href="#">
+<span class="material-symbols-outlined text-[18px]">hub</span>
+<span>View Network</span>
+</a>
+<button class="bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-sm text-body-sm font-medium py-space-xs px-space-sm rounded-lg transition-colors flex items-center justify-center gap-space-2xs">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+<span>Export Geo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Compact Floating Tactical Map Controls (Bottom Right Dock) -->
+<div class="absolute bottom-6 left-6 z-30 flex items-center gap-space-xs">
+<!-- Cluster View Mode -->
+<div class="bg-surface-container/90 backdrop-blur-md p-space-2xs rounded-lg flex items-center gap-space-2xs shadow-xl">
+<button class="p-space-xs rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-fit" title="Fit to Pins">
+<span class="material-symbols-outlined text-[20px]">filter_center_focus</span>
+</button>
+<button class="p-space-xs rounded-md text-on-surface-variant hover:text-tertiary hover:bg-surface-container-high transition-colors" id="btn-heatmap" title="Toggle Density Heatmap">
+<span class="material-symbols-outlined text-[20px]">local_fire_department</span>
+</button>
+<button class="p-space-xs rounded-md text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-fullscreen" title="Fullscreen Terminal">
+<span class="material-symbols-outlined text-[20px]">fullscreen</span>
+</button>
+</div>
+<!-- Zoom Slider / Incrementors -->
+<div class="bg-surface-container/90 backdrop-blur-md p-space-2xs rounded-lg flex items-center gap-space-2xs shadow-xl">
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-zoom-in" title="Zoom In">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<span class="font-code-md text-label-sm text-primary font-semibold px-space-2xs select-none" id="zoom-level">14.8x</span>
+<button class="w-8 h-8 rounded-md flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-colors" id="btn-zoom-out" title="Zoom Out">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+</div>
+<!-- Live Coordinates Telemetry Pill -->
+<div class="bg-surface-container/90 backdrop-blur-md px-space-sm py-space-xs rounded-lg hidden md:flex items-center gap-space-xs shadow-xl">
+<span class="material-symbols-outlined text-primary text-[18px]">satellite</span>
+<span class="font-code-md text-code-md text-on-surface font-medium">CURSOR: 37.7928° N, -122.3980° W</span>
+</div>
+</div>
+<!-- Map Legend Bar (Bottom Center) -->
+<div class="absolute bottom-6 right-6 z-20 hidden xl:flex items-center gap-space-md bg-surface-container/85 backdrop-blur-md px-space-md py-space-xs rounded-lg shadow-xl">
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-full bg-primary shadow-[0_0_6px_currentColor]"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Selected Pier Target</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Apex HQ</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Safehouse</span>
+</div>
+<div class="flex items-center gap-space-2xs">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Cell Intercept Sector</span>
+</div>
+</div>
+</div>
+<!-- Bottom Tactical Telemetry Stream -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-sm">
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">history</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Transit Time Elapsed</span>
+<span class="font-code-md text-headline-sm text-on-surface font-semibold">00:44:12</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-primary font-code-md text-label-sm font-semibold">+4.2 kn avg</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[22px]">cell_tower</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Towers In Handshake</span>
+<span class="font-code-md text-headline-sm text-on-surface font-semibold">5 Nodes</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-tertiary font-code-md text-label-sm font-semibold">Triangulated</span>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm flex items-center justify-between shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[22px]">policy</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">Surveillance Units On-Site</span>
+<span class="font-code-md text-headline-sm text-on-surface font-semibold">Unit 3B &amp; Recon-2</span>
+</div>
+</div>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container text-secondary font-code-md text-label-sm font-semibold">Monitoring</span>
+</div>
+</div>
+</div>
+<script>
+  let currentZoom = 14.8;
+  const zoomDisplay = document.getElementById('zoom-level');
+  const panel = document.getElementById('location-detail-panel');
+  const panelTitle = document.getElementById('panel-title');
+  const panelCoords = document.getElementById('panel-coords');
+
+  const locationData = {
+    dock: {
+      title: 'Pier 14 Logistics Dock',
+      coords: '37.7941° N, 122.3956° W'
+    },
+    apex: {
+      title: 'Financial District Apex Tower',
+      coords: '37.7915° N, 122.4012° W'
+    },
+    safehouse: {
+      title: 'Safehouse Warehouse #14',
+      coords: '37.7842° N, 122.4110° W'
+    },
+    celltower: {
+      title: 'Cell Tower Apex West Sector',
+      coords: '37.7990° N, 122.4085° W'
+    }
+  };
+
+  function selectPin(key) {
+    if (locationData[key]) {
+      panelTitle.innerText = locationData[key].title;
+      panelCoords.innerText = locationData[key].coords;
+      panel.classList.add('ring-2', 'ring-primary');
+      setTimeout(() => {
+        panel.classList.remove('ring-2', 'ring-primary');
+      }, 400);
+    }
+  }
+
+  document.getElementById('btn-zoom-in')?.addEventListener('click', () => {
+    currentZoom = Math.min(22, +(currentZoom + 0.5).toFixed(1));
+    if (zoomDisplay) zoomDisplay.innerText = currentZoom + 'x';
+  });
+
+  document.getElementById('btn-zoom-out')?.addEventListener('click', () => {
+    currentZoom = Math.max(5, +(currentZoom - 0.5).toFixed(1));
+    if (zoomDisplay) zoomDisplay.innerText = currentZoom + 'x';
+  });
+
+  document.getElementById('btn-fit')?.addEventListener('click', () => {
+    currentZoom = 14.8;
+    if (zoomDisplay) zoomDisplay.innerText = '14.8x';
+    selectPin('dock');
+  });
+
+  document.getElementById('btn-heatmap')?.addEventListener('click', function() {
+    this.classList.toggle('text-tertiary');
+    this.classList.toggle('bg-surface-container-highest');
+  });
+
+  // Toggle filter active styles
+  ['toggle-checkpoints', 'toggle-alpr', 'toggle-celltowers', 'toggle-geofence'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.addEventListener('click', () => {
+        el.classList.toggle('opacity-50');
+      });
+    }
+  });
+</script></main></div></body></html>

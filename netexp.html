@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#122131", "on-tertiary-fixed-variant": "#004e5c", "on-surface-variant": "#c2c6d6", "on-secondary-fixed": "#00174b", "on-error": "#690005", "surface-container-high": "#1c2b3c", "surface-container-lowest": "#010f1f", "tertiary-fixed": "#acedff", "outline": "#8c909f", "surface-bright": "#2c3a4c", "on-tertiary": "#003640", "surface-tint": "#adc6ff", "on-tertiary-fixed": "#001f26", "on-surface": "#d4e4fa", "primary-container": "#4d8eff", "on-secondary": "#002a78", "on-secondary-fixed-variant": "#003ea8", "on-primary-fixed-variant": "#004395", "secondary-container": "#0053db", "error": "#ffb4ab", "inverse-on-surface": "#233143", "surface-container-highest": "#273647", "tertiary-container": "#009eb9", "on-tertiary-container": "#002f38", "outline-variant": "#424754", "inverse-surface": "#d4e4fa", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "secondary": "#b4c5ff", "primary-fixed-dim": "#adc6ff", "tertiary-fixed-dim": "#4cd7f6", "on-secondary-container": "#cdd7ff", "surface": "#051424", "secondary-fixed-dim": "#b4c5ff", "surface-variant": "#273647", "background": "#051424", "on-primary-fixed": "#001a42", "on-background": "#d4e4fa", "tertiary": "#4cd7f6", "on-primary": "#002e6a", "primary": "#adc6ff", "secondary-fixed": "#dbe1ff", "on-primary-container": "#00285d", "inverse-primary": "#005ac2", "on-error-container": "#ffdad6", "error-container": "#93000a", "primary-fixed": "#d8e2ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "3rem", "gutter-default": "1rem", "space-md": "1rem", "gutter-expanded": "1.5rem", "space-xl": "2rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "gutter-compact": "0.75rem", "space-xs": "0.5rem", "space-2xs": "0.25rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Geist" ], "body-lg": [ "Inter" ], "headline-sm": [ "Geist" ], "label-sm": [ "JetBrains Mono" ], "headline-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ] }, "fontSize": { "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "500" } ], "display-lg": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ], "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } };</script></head><body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md">
+        <div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-[0_0_12px_rgba(77,142,255,0.25)]"><span class="material-symbols-outlined text-[24px]">radar</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">NetTrace AI</span><span class="font-label-sm text-label-sm text-tertiary tracking-wider font-semibold uppercase">TACTICAL CORE</span></div></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="home.html"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="upload-case" href="upload.html">
+                <span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-body-md text-body-md flex-1">Upload Case</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]" data-path="network-explorer" href="netexp.html"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md flex-1">Network Explorer</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="connection-finder" href="confind.html"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-body-md text-body-md flex-1">Connection Finder</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="timeline" href="timeline.html"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md flex-1">Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="evidence" href="evidenceq.html"><span class="material-symbols-outlined text-[20px]">lock_clock</span><span class="font-body-md text-body-md flex-1">Evidence</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="geographic-map" href="map.html"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md flex-1">Geographic Map</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md flex-1">AI Assistant</span><span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary">ONLINE</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md flex-1">Reports</span></a></nav></div><div class="px-space-xs flex flex-col gap-space-xs"><nav class="flex flex-col" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md flex-1">Settings</span></a></nav><div class="mx-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">SECNET V4.2 ENCRYPTED</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between gap-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex-1 max-w-xl"><div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search person, phone, vehicle, location or case..." type="text"/><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span class="font-semibold">⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_rgba(77,142,255,0.8)]"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm px-space-xs py-space-2xs rounded-lg bg-surface-container-low"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Agent Miller</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Investigator - Analyst</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-md"><div class="flex flex-col w-full">
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-sm mb-space-md">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs mb-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-tertiary bg-surface-container-high px-space-xs py-0.5 rounded">Tactical Intelligence Layer</span>
+<span class="text-outline text-body-sm font-label-md">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-code-md">SEC-OP 408-WIRE</span>
+</div>
+<h1 class="font-display-lg text-headline-lg text-on-surface tracking-tight font-semibold flex items-center gap-space-xs">
+        Network Explorer
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Case #408 — Syndicate Wire Investigation
+      </p>
+</div>
+<div class="flex items-center gap-space-xs self-start lg:self-center">
+<div class="flex items-center bg-surface-container rounded-lg p-space-2xs shadow-sm">
+<button class="px-space-sm py-1.5 rounded text-on-primary bg-secondary-container font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-all" id="view-graph">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+          Graph View
+        </button>
+<button class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1 transition-all" id="view-cluster">
+<span class="material-symbols-outlined text-[16px]">bubble_chart</span>
+          Cluster Map
+        </button>
+<button class="px-space-sm py-1.5 rounded text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium flex items-center gap-1 transition-all" id="view-matrix">
+<span class="material-symbols-outlined text-[16px]">grid_view</span>
+          Matrix
+        </button>
+</div>
+<button class="bg-surface-container hover:bg-surface-container-high text-on-surface px-space-sm py-2 rounded-lg font-label-sm text-label-sm font-semibold flex items-center gap-1 transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">download</span>
+        Export Graph
+      </button>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-sm mb-space-md flex flex-col xl:flex-row gap-space-sm items-stretch xl:items-center justify-between shadow-md">
+<div class="relative flex-1">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-[20px]">search</span>
+<input class="w-full pl-10 pr-10 py-2 bg-surface-container rounded-lg font-body-md text-body-md text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-high transition-all" id="graph-search" placeholder="Search person, phone number, vehicle, location, or case..." type="text"/>
+<button class="absolute right-3 top-2.5 text-outline hover:text-on-surface transition-colors" id="clear-search">
+<span class="material-symbols-outlined text-[18px]">cancel</span>
+</button>
+</div>
+<div class="flex items-center gap-space-2xs overflow-x-auto py-1">
+<button class="filter-pill px-space-sm py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm font-semibold whitespace-nowrap shadow-sm transition-all" data-filter="all">
+        All (18)
+      </button>
+<button class="filter-pill px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap transition-all" data-filter="person">
+        Persons (5)
+      </button>
+<button class="filter-pill px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap transition-all" data-filter="phone">
+        Phones (4)
+      </button>
+<button class="filter-pill px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap transition-all" data-filter="vehicle">
+        Vehicles (3)
+      </button>
+<button class="filter-pill px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap transition-all" data-filter="location">
+        Locations (4)
+      </button>
+<button class="filter-pill px-space-sm py-1.5 rounded-full bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm font-medium whitespace-nowrap transition-all" data-filter="case">
+        Cases (2)
+      </button>
+</div>
+</div>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<div class="xl:col-span-8 relative flex flex-col bg-surface-container-lowest rounded-xl overflow-hidden shadow-2xl h-[700px]">
+<div class="absolute inset-0 pointer-events-none opacity-20 bg-[radial-gradient(#4d8eff_1px,transparent_1px)] [background-size:24px_24px]"></div>
+<div class="absolute top-4 left-4 z-20 flex items-center gap-space-2xs bg-surface-container-low/90 backdrop-blur-md px-space-sm py-1 rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">SYNCHRONIZED KINEMATICS ACTIVE</span>
+<span class="font-code-md text-label-sm text-tertiary ml-2">λ: 0.824</span>
+</div>
+<div class="absolute top-4 right-4 z-20 flex flex-col gap-space-2xs bg-surface-container-low/95 backdrop-blur-md p-1 rounded-lg shadow-xl">
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="zoom-in" title="Zoom In">
+<span class="material-symbols-outlined text-[20px]">add</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="zoom-out" title="Zoom Out">
+<span class="material-symbols-outlined text-[20px]">remove</span>
+</button>
+<button class="w-8 h-8 rounded flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" id="center-view" title="Center View">
+<span class="material-symbols-outlined text-[20px]">filter_center_focus</span>
+</button>
+<div class="h-px bg-surface-container-high my-0.5"></div>
+<button class="w-8 h-8 rounded flex items-center justify-center text-tertiary hover:bg-surface-container transition-colors" id="physics-toggle" title="Toggle Force Physics">
+<span class="material-symbols-outlined text-[20px]">motion_photos_on</span>
+</button>
+</div>
+<div class="absolute bottom-4 left-4 z-20 bg-surface-container-low/90 backdrop-blur-md rounded-lg p-space-sm flex flex-wrap items-center gap-y-2 gap-x-4 max-w-xl text-on-surface-variant">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-primary shadow-[0_0_8px_rgba(173,198,255,0.8)]"></span>
+<span>Target / Suspect</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span>Co-conspirator</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-[#f43f5e]"></span>
+<span>Phone / SIM</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-[#10b981]"></span>
+<span>Location</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-[#f59e0b]"></span>
+<span>Vehicle</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span>Entity / Org</span>
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span>Case Docket</span>
+</div>
+</div>
+<div class="relative w-full h-full cursor-grab active:cursor-grabbing overflow-hidden select-none" id="network-viewport">
+<svg class="w-full h-full absolute inset-0" id="network-svg" viewbox="0 0 1000 700">
+<defs>
+<lineargradient id="link-grad-blue" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#adc6ff" stop-opacity="0.8"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.3"></stop>
+</lineargradient>
+<lineargradient id="link-grad-red" x1="0%" x2="100%" y1="0%" y2="100%">
+<stop offset="0%" stop-color="#ffb4ab" stop-opacity="0.7"></stop>
+<stop offset="100%" stop-color="#adc6ff" stop-opacity="0.2"></stop>
+</lineargradient>
+<filter height="140%" id="glow-primary" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="6"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<filter height="140%" id="glow-subtle" width="140%" x="-20%" y="-20%">
+<fegaussianblur result="blur" stddeviation="3"></fegaussianblur>
+<fecomposite in="SourceGraphic" in2="blur" operator="over"></fecomposite>
+</filter>
+<marker id="arrow" markerheight="6" markerwidth="6" orient="auto-start-reverse" refx="28" refy="5" viewbox="0 0 10 10">
+<path d="M 0 1 L 10 5 L 0 9 z" fill="#4cd7f6" opacity="0.6"></path>
+</marker>
+</defs>
+<g id="graph-links" stroke-linecap="round">
+<line marker-end="url(#arrow)" opacity="0.6" stroke="#adc6ff" stroke-dasharray="4 2" stroke-width="2" x1="490" x2="310" y1="330" y2="200"></line>
+<line marker-end="url(#arrow)" opacity="0.7" stroke="#4cd7f6" stroke-width="2" x1="490" x2="710" y1="330" y2="240"></line>
+<line opacity="0.8" stroke="#f43f5e" stroke-width="2.5" x1="490" x2="680" y1="330" y2="460"></line>
+<line opacity="0.6" stroke="#10b981" stroke-width="1.8" x1="490" x2="270" y1="330" y2="440"></line>
+<line opacity="0.6" stroke="#f59e0b" stroke-width="1.8" x1="490" x2="430" y1="330" y2="560"></line>
+<line opacity="0.5" stroke="#ffb4ab" stroke-dasharray="2 2" stroke-width="2" x1="490" x2="490" y1="330" y2="130"></line>
+<line opacity="0.5" stroke="#4cd7f6" stroke-width="1.5" x1="710" x2="840" y1="240" y2="340"></line>
+<line opacity="0.4" stroke="#adc6ff" stroke-width="1.2" x1="310" x2="160" y1="200" y2="210"></line>
+<line opacity="0.4" stroke="#ffb4ab" stroke-dasharray="3 3" stroke-width="1.2" x1="490" x2="340" y1="130" y2="90"></line>
+<line opacity="0.5" stroke="#f43f5e" stroke-width="1.5" x1="680" x2="830" y1="460" y2="520"></line>
+<line opacity="0.4" stroke="#10b981" stroke-width="1.2" x1="270" x2="150" y1="440" y2="520"></line>
+<circle class="animate-pulse" cx="400" cy="265" fill="#adc6ff" r="3"></circle>
+<circle class="animate-pulse" cx="600" cy="285" fill="#4cd7f6" r="3"></circle>
+<circle class="animate-pulse" cx="585" cy="395" fill="#f43f5e" r="3"></circle>
+</g>
+<g id="graph-nodes">
+<!-- Node: David Chen (Target #1) -->
+<g class="graph-node cursor-pointer group" data-node="david-chen" transform="translate(490, 330)">
+<circle class="animate-[spin_18s_linear_infinite]" fill="transparent" r="46" stroke="#adc6ff" stroke-dasharray="4 4" stroke-width="2"></circle>
+<circle fill="#122131" filter="url(#glow-primary)" r="36" stroke="#4d8eff" stroke-width="3"></circle>
+<circle fill="#00285d" r="30"></circle>
+<text fill="#d4e4fa" font-family="Inter" font-size="14" font-weight="700" text-anchor="middle" y="5">DC</text>
+<rect fill="#0d1c2d" height="24" rx="12" width="130" x="-65" y="44"></rect>
+<text fill="#adc6ff" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" y="60">David Chen (T-1)</text>
+<circle cx="28" cy="-24" fill="#4d8eff" r="8"></circle>
+<text fill="#001a42" font-family="Inter" font-size="10" font-weight="800" text-anchor="middle" x="28" y="-20">!</text>
+</g>
+<!-- Node: Elena Rostova -->
+<g class="graph-node cursor-pointer group" data-node="elena-rostova" transform="translate(310, 200)">
+<circle fill="#1c2b3c" filter="url(#glow-subtle)" r="26" stroke="#b4c5ff" stroke-width="2"></circle>
+<text fill="#d4e4fa" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" y="4">ER</text>
+<rect fill="#0d1c2d" height="20" rx="10" width="100" x="-50" y="32"></rect>
+<text fill="#b4c5ff" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" y="46">Elena Rostova</text>
+</g>
+<!-- Node: Phone SIM -->
+<g class="graph-node cursor-pointer group" data-node="phone-sim" transform="translate(680, 460)">
+<circle fill="#1c2b3c" filter="url(#glow-subtle)" r="28" stroke="#f43f5e" stroke-width="2"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" y="5">SIM</text>
+<rect fill="#0d1c2d" height="20" rx="10" width="144" x="-72" y="34"></rect>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" font-weight="600" text-anchor="middle" y="48">+1 (555) 349-0128</text>
+</g>
+<!-- Node: Location Pier 14 -->
+<g class="graph-node cursor-pointer group" data-node="pier-14" transform="translate(270, 440)">
+<circle fill="#1c2b3c" filter="url(#glow-subtle)" r="26" stroke="#10b981" stroke-width="2"></circle>
+<text fill="#6ee7b7" font-family="Inter" font-size="12" font-weight="600" text-anchor="middle" y="4">P14</text>
+<rect fill="#0d1c2d" height="20" rx="10" width="130" x="-65" y="32"></rect>
+<text fill="#6ee7b7" font-family="Inter" font-size="11" font-weight="500" text-anchor="middle" y="46">Pier 14 Logistics</text>
+</g>
+<!-- Node: Vehicle -->
+<g class="graph-node cursor-pointer group" data-node="vehicle-sedan" transform="translate(430, 560)">
+<circle fill="#1c2b3c" filter="url(#glow-subtle)" r="24" stroke="#f59e0b" stroke-width="2"></circle>
+<text fill="#fcd34d" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" y="4">VEH</text>
+<rect fill="#0d1c2d" height="20" rx="10" width="120" x="-60" y="30"></rect>
+<text fill="#fcd34d" font-family="JetBrains Mono" font-size="10" font-weight="500" text-anchor="middle" y="44">Sedan [CA 8XYZ21]</text>
+</g>
+<!-- Node: Apex Global -->
+<g class="graph-node cursor-pointer group" data-node="apex-global" transform="translate(710, 240)">
+<circle fill="#1c2b3c" filter="url(#glow-subtle)" r="30" stroke="#4cd7f6" stroke-width="2.5"></circle>
+<text fill="#acedff" font-family="Inter" font-size="11" font-weight="700" text-anchor="middle" y="5">AGH</text>
+<rect fill="#0d1c2d" height="20" rx="10" width="140" x="-70" y="36"></rect>
+<text fill="#acedff" font-family="Inter" font-size="11" font-weight="600" text-anchor="middle" y="50">Apex Global Holdings</text>
+</g>
+<!-- Node: Case File 408 -->
+<g class="graph-node cursor-pointer group" data-node="case-408" transform="translate(490, 130)">
+<circle fill="#1c2b3c" filter="url(#glow-subtle)" r="26" stroke="#ffb4ab" stroke-width="2"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="10" font-weight="700" text-anchor="middle" y="4">#408</text>
+<rect fill="#0d1c2d" height="20" rx="10" width="100" x="-50" y="32"></rect>
+<text fill="#ffb4ab" font-family="Inter" font-size="10" font-weight="600" text-anchor="middle" y="46">Case #408 (Active)</text>
+</g>
+<!-- Node: Case File 392 -->
+<g class="graph-node cursor-pointer group" data-node="case-392" transform="translate(340, 90)">
+<circle fill="#1c2b3c" r="20" stroke="#ffb4ab" stroke-dasharray="2 2" stroke-width="1.5"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="9" text-anchor="middle" y="3">#392</text>
+<rect fill="#0d1c2d" height="18" rx="9" width="90" x="-45" y="24"></rect>
+<text fill="#c2c6d6" font-family="Inter" font-size="9" text-anchor="middle" y="37">Case #392 (Archived)</text>
+</g>
+<!-- Node: Crypto Escrow -->
+<g class="graph-node cursor-pointer group" data-node="crypto-escrow" transform="translate(840, 340)">
+<circle fill="#1c2b3c" r="22" stroke="#009eb9" stroke-width="2"></circle>
+<text fill="#4cd7f6" font-family="JetBrains Mono" font-size="9" font-weight="700" text-anchor="middle" y="4">USDT</text>
+<rect fill="#0d1c2d" height="18" rx="9" width="110" x="-55" y="28"></rect>
+<text fill="#4cd7f6" font-family="Inter" font-size="9" text-anchor="middle" y="41">Crypto Escrow (USDT)</text>
+</g>
+<!-- Secondary Nodes -->
+<g class="graph-node cursor-pointer group opacity-75" data-node="satellite-phone" transform="translate(830, 520)">
+<circle fill="#122131" r="16" stroke="#f43f5e" stroke-width="1.5"></circle>
+<text fill="#ffb4ab" font-family="JetBrains Mono" font-size="8" text-anchor="middle" y="3">BUR</text>
+</g>
+<g class="graph-node cursor-pointer group opacity-75" data-node="dock-warehouse" transform="translate(150, 520)">
+<circle fill="#122131" r="16" stroke="#10b981" stroke-width="1.5"></circle>
+<text fill="#6ee7b7" font-family="Inter" font-size="8" text-anchor="middle" y="3">W-3</text>
+</g>
+<g class="graph-node cursor-pointer group opacity-75" data-node="financial-consultant" transform="translate(160, 210)">
+<circle fill="#122131" r="16" stroke="#b4c5ff" stroke-width="1.5"></circle>
+<text fill="#d4e4fa" font-family="Inter" font-size="8" text-anchor="middle" y="3">MK</text>
+</g>
+</g>
+</svg>
+<div class="absolute bottom-4 right-4 bg-surface-container-low/90 backdrop-blur-md px-space-sm py-1.5 rounded-lg flex items-center gap-space-xs text-on-surface-variant font-label-sm text-label-sm">
+<span>Active Centrality:</span>
+<span class="font-code-md text-tertiary font-semibold">PageRank β=0.85</span>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">badge</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Entity Details</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-1 rounded-md bg-error-container text-error font-semibold uppercase tracking-wider">
+            Critical Watchlist
+          </span>
+</div>
+<div class="bg-surface-container rounded-xl p-space-md flex flex-col gap-space-sm shadow-inner relative overflow-hidden">
+<div class="absolute -right-8 -top-8 w-28 h-28 rounded-full bg-primary/10 blur-2xl pointer-events-none"></div>
+<div class="flex items-start gap-space-sm">
+<div class="relative w-16 h-16 rounded-xl overflow-hidden bg-surface-container-high shrink-0 shadow-md">
+<img class="w-full h-full object-cover" data-alt="High resolution tactical surveillance capture photo of an adult male subject David Chen with low key moody backlighting, facial biometric wireframe overlay markers, deep navy background and tactical analysis HUD elements" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZZBiB1yjZNCazNCUMAKqy0kWyBZy1Q1dTLMZAciZVMp43hZ-0G-LKWMzPqSumtwQhwFM9qW-vLFOQzw_lFd5qBWLVeYdxShT_80i-odRF86LtAq5rLfLMRUBFsG40bsxIzt0W-boku9qf3VKtCVaVFgQPyrHSEY9EGsL3A0dkavxmVu9HxI2lmUaAljaEIIpHjbB2seEAYWdGzKuaRPFICopUViTGHdt784T7n7arnLSskkTmIjjG"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest/80 to-transparent"></div>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<div class="flex items-center gap-space-2xs flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold truncate" id="entity-name">David Chen</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Target #1</span>
+</div>
+<span class="font-label-md text-label-md text-tertiary font-semibold tracking-wide mt-0.5" id="entity-subtitle">Primary Person of Interest</span>
+<span class="font-code-md text-label-sm text-on-surface-variant/80 mt-1">UUID: ENT-8834-PER</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs">
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Entity Type</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-0.5" id="entity-type">Person (Suspect)</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Direct Links</span>
+<span class="font-code-md text-body-md text-primary font-bold mt-0.5" id="entity-links">7 Relational Nodes</span>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Centrality Metric</span>
+<div class="flex items-center gap-1.5 mt-0.5">
+<span class="font-code-md text-body-md text-tertiary font-bold" id="entity-centrality">0.948</span>
+<span class="font-label-sm text-[10px] text-tertiary uppercase">High</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-lg p-2.5 flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant">First Record</span>
+<span class="font-code-md text-label-sm text-on-surface font-medium mt-1" id="entity-first-recorded">Aug 11, 2026 (Wire)</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Cross-Docket Linkages</span>
+<span class="font-label-sm text-label-sm text-tertiary">2 Associated Records</span>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between hover:bg-surface-container-high transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[18px]">folder</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-sm font-semibold text-on-surface leading-tight">Case #408</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Syndicate Wiretap &amp; Extortion</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-highest text-primary font-bold uppercase">Active Lead</span>
+</div>
+<div class="bg-surface-container rounded-lg p-2.5 flex items-center justify-between hover:bg-surface-container-high transition-colors cursor-pointer opacity-80">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-outline text-[18px]">inventory_2</span>
+<div class="flex flex-col">
+<span class="font-body-md text-body-sm font-semibold text-on-surface leading-tight">Case #392</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant">Maritime Smuggling - Pacific Sector</span>
+</div>
+</div>
+<span class="font-label-sm text-[10px] px-2 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-medium uppercase">Archived</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider font-semibold">Triage Telemetry Vector</span>
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-2">
+<div class="flex items-center justify-between font-label-sm text-label-sm">
+<span class="text-on-surface-variant">Network Influence Density</span>
+<span class="text-tertiary font-code-md">94.8%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary via-tertiary to-error h-full rounded-full w-[94.8%]"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[11px] text-on-surface-variant/70 pt-1">
+<span>Risk Classification: High Tier</span>
+<span>Vector: Financial / Comm</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 px-space-md rounded-lg bg-primary-container text-on-primary font-headline-sm text-body-md font-semibold flex items-center justify-center gap-2 hover:brightness-110 active:scale-[0.99] transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+            View Evidence (14 Files)
+          </button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">device_hub</span>
+              Expand Network
+            </button>
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-sm text-label-sm font-semibold flex items-center justify-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]">post_add</span>
+              Add to Dossier
+            </button>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider">Sub-Cluster Activity</span>
+<span class="font-label-sm text-label-sm text-outline">Real-time Stream</span>
+</div>
+<div class="flex flex-col gap-2 mt-1">
+<div class="flex items-start gap-2 bg-surface-container/60 p-2 rounded">
+<span class="w-2 h-2 rounded-full bg-error mt-1.5"></span>
+<div class="flex flex-col text-left flex-1 min-w-0">
+<span class="font-body-md text-body-sm text-on-surface font-medium truncate">Out-of-band VoIP packet traced</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-code-md">SIM +1(555)349-0128 • 4m ago</span>
+</div>
+</div>
+<div class="flex items-start gap-2 bg-surface-container/60 p-2 rounded">
+<span class="w-2 h-2 rounded-full bg-tertiary mt-1.5"></span>
+<div class="flex flex-col text-left flex-1 min-w-0">
+<span class="font-body-md text-body-sm text-on-surface font-medium truncate">Apex Global shell registry refresh</span>
+<span class="font-label-sm text-[11px] text-on-surface-variant font-code-md">Cayman Islands Entity • 18m ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initNetworkExplorer() {
+    const nodes = {
+      'david-chen': {
+        name: 'David Chen (Target #1)',
+        subtitle: 'Primary Person of Interest',
+        type: 'Person (Suspect)',
+        links: '7 Relational Nodes',
+        centrality: '0.948',
+        firstRecorded: 'Aug 11, 2026 (Wire)',
+        badge: 'Target #1'
+      },
+      'elena-rostova': {
+        name: 'Elena Rostova',
+        subtitle: 'Key Asset / Co-conspirator',
+        type: 'Person (Suspect)',
+        links: '4 Relational Nodes',
+        centrality: '0.672',
+        firstRecorded: 'Jul 29, 2026 (Physical)',
+        badge: 'Associate'
+      },
+      'phone-sim': {
+        name: '+1 (555) 349-0128',
+        subtitle: 'Disposable Carrier Node',
+        type: 'Telecom Identifier',
+        links: '3 Relational Nodes',
+        centrality: '0.512',
+        firstRecorded: 'Aug 14, 2026 (IMSI Grab)',
+        badge: 'Burner SIM'
+      },
+      'pier-14': {
+        name: 'Pier 14 Logistics Dock',
+        subtitle: 'Dropoff / Ingress Point',
+        type: 'Geographic Terminal',
+        links: '4 Relational Nodes',
+        centrality: '0.430',
+        firstRecorded: 'Jun 03, 2026 (Surveillance)',
+        badge: 'Sector Pier'
+      },
+      'vehicle-sedan': {
+        name: 'Sedan [CA 8XYZ21]',
+        subtitle: 'Tactical Transit Vehicle',
+        type: 'Registered Asset',
+        links: '2 Relational Nodes',
+        centrality: '0.315',
+        firstRecorded: 'Aug 02, 2026 (ALPR Camera)',
+        badge: 'Dark Grey Sedan'
+      },
+      'apex-global': {
+        name: 'Apex Global Holdings LLC',
+        subtitle: 'Corporate Vehicle / Money Mule',
+        type: 'Offshore Commercial Shell',
+        links: '5 Relational Nodes',
+        centrality: '0.814',
+        firstRecorded: 'May 17, 2026 (FinCEN Flag)',
+        badge: 'Entity LLC'
+      },
+      'case-408': {
+        name: 'Case #408 (Active)',
+        subtitle: 'Primary Wire Investigation',
+        type: 'Docket Core File',
+        links: '11 Associated Nodes',
+        centrality: '1.000',
+        firstRecorded: 'May 01, 2026 (Grand Jury)',
+        badge: 'Case Master'
+      },
+      'crypto-escrow': {
+        name: 'Crypto Escrow (USDT)',
+        subtitle: 'Tether Treasury Hot-Wallet',
+        type: 'Financial / Blockchain Node',
+        links: '3 Relational Nodes',
+        centrality: '0.589',
+        firstRecorded: 'Aug 10, 2026 (Ledger Audit)',
+        badge: 'TRC-20 Escrow'
+      }
+    };
+
+    const nodeElements = document.querySelectorAll('.graph-node');
+    const entityName = document.getElementById('entity-name');
+    const entitySubtitle = document.getElementById('entity-subtitle');
+    const entityType = document.getElementById('entity-type');
+    const entityLinks = document.getElementById('entity-links');
+    const entityCentrality = document.getElementById('entity-centrality');
+    const entityFirstRecorded = document.getElementById('entity-first-recorded');
+
+    nodeElements.forEach(nodeEl => {
+      nodeEl.addEventListener('click', () => {
+        const nodeId = nodeEl.getAttribute('data-node');
+        const data = nodes[nodeId];
+        if (!data) return;
+
+        nodeElements.forEach(el => el.classList.remove('active-node-selected'));
+        nodeEl.classList.add('active-node-selected');
+
+        if (entityName) entityName.textContent = data.name;
+        if (entitySubtitle) entitySubtitle.textContent = data.subtitle;
+        if (entityType) entityType.textContent = data.type;
+        if (entityLinks) entityLinks.textContent = data.links;
+        if (entityCentrality) entityCentrality.textContent = data.centrality;
+        if (entityFirstRecorded) entityFirstRecorded.textContent = data.firstRecorded;
+      });
+    });
+
+    const searchInput = document.getElementById('graph-search');
+    const clearBtn = document.getElementById('clear-search');
+
+    if (searchInput && clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        searchInput.value = '';
+        nodeElements.forEach(el => {
+          el.style.opacity = '1';
+        });
+      });
+
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        if (!query) {
+          nodeElements.forEach(el => {
+            el.style.opacity = '1';
+          });
+          return;
+        }
+
+        nodeElements.forEach(el => {
+          const text = el.textContent.toLowerCase();
+          if (text.includes(query)) {
+            el.style.opacity = '1';
+          } else {
+            el.style.opacity = '0.15';
+          }
+        });
+      });
+    }
+
+    const filterPills = document.querySelectorAll('.filter-pill');
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('bg-primary', 'text-on-primary');
+          p.classList.add('bg-surface-container', 'text-on-surface-variant');
+        });
+        pill.classList.remove('bg-surface-container', 'text-on-surface-variant');
+        pill.classList.add('bg-primary', 'text-on-primary');
+      });
+    });
+
+    const svg = document.getElementById('network-svg');
+    let currentScale = 1;
+    const zoomInBtn = document.getElementById('zoom-in');
+    const zoomOutBtn = document.getElementById('zoom-out');
+    const centerBtn = document.getElementById('center-view');
+
+    if (zoomInBtn && svg) {
+      zoomInBtn.addEventListener('click', () => {
+        currentScale = Math.min(currentScale + 0.15, 2.2);
+        svg.style.transform = `scale(${currentScale})`;
+        svg.style.transformOrigin = 'center center';
+        svg.style.transition = 'transform 0.2s ease-out';
+      });
+    }
+
+    if (zoomOutBtn && svg) {
+      zoomOutBtn.addEventListener('click', () => {
+        currentScale = Math.max(currentScale - 0.15, 0.5);
+        svg.style.transform = `scale(${currentScale})`;
+        svg.style.transformOrigin = 'center center';
+        svg.style.transition = 'transform 0.2s ease-out';
+      });
+    }
+
+    if (centerBtn && svg) {
+      centerBtn.addEventListener('click', () => {
+        currentScale = 1;
+        svg.style.transform = 'scale(1)';
+        svg.style.transition = 'transform 0.3s ease-out';
+      });
+    }
+
+    const physicsBtn = document.getElementById('physics-toggle');
+    let physicsActive = true;
+    if (physicsBtn) {
+      physicsBtn.addEventListener('click', () => {
+        physicsActive = !physicsActive;
+        physicsBtn.style.color = physicsActive ? '#4cd7f6' : '#8c909f';
+      });
+    }
+  })();
+</script></main></div></body></html>

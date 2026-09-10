@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style>
+        <script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#122131", "on-tertiary-fixed-variant": "#004e5c", "on-surface-variant": "#c2c6d6", "on-secondary-fixed": "#00174b", "on-error": "#690005", "surface-container-high": "#1c2b3c", "surface-container-lowest": "#010f1f", "tertiary-fixed": "#acedff", "outline": "#8c909f", "surface-bright": "#2c3a4c", "on-tertiary": "#003640", "surface-tint": "#adc6ff", "on-tertiary-fixed": "#001f26", "on-surface": "#d4e4fa", "primary-container": "#4d8eff", "on-secondary": "#002a78", "on-secondary-fixed-variant": "#003ea8", "on-primary-fixed-variant": "#004395", "secondary-container": "#0053db", "error": "#ffb4ab", "inverse-on-surface": "#233143", "surface-container-highest": "#273647", "tertiary-container": "#009eb9", "on-tertiary-container": "#002f38", "outline-variant": "#424754", "inverse-surface": "#d4e4fa", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "secondary": "#b4c5ff", "primary-fixed-dim": "#adc6ff", "tertiary-fixed-dim": "#4cd7f6", "on-secondary-container": "#cdd7ff", "surface": "#051424", "secondary-fixed-dim": "#b4c5ff", "surface-variant": "#273647", "background": "#051424", "on-primary-fixed": "#001a42", "on-background": "#d4e4fa", "tertiary": "#4cd7f6", "on-primary": "#002e6a", "primary": "#adc6ff", "secondary-fixed": "#dbe1ff", "on-primary-container": "#00285d", "inverse-primary": "#005ac2", "on-error-container": "#ffdad6", "error-container": "#93000a", "primary-fixed": "#d8e2ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "3rem", "gutter-default": "1rem", "space-md": "1rem", "gutter-expanded": "1.5rem", "space-xl": "2rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "gutter-compact": "0.75rem", "space-xs": "0.5rem", "space-2xs": "0.25rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Geist" ], "body-lg": [ "Inter" ], "headline-sm": [ "Geist" ], "label-sm": [ "JetBrains Mono" ], "headline-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ] }, "fontSize": { "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "500" } ], "display-lg": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ], "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } };</script></head>
+<body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-[0_0_12px_rgba(77,142,255,0.25)]"><span class="material-symbols-outlined text-[24px]">radar</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">NetTrace AI</span><span class="font-label-sm text-label-sm text-tertiary tracking-wider font-semibold uppercase">TACTICAL CORE</span></div></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="home.html"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="upload-case" href="upload.html"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-body-md text-body-md flex-1">Upload Case</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="network-explorer" href="netexp.html"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md flex-1">Network Explorer</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]" data-path="connection-finder" href="confind.html"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-body-md text-body-md flex-1">Connection Finder</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="timeline" href="timeline.html"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md flex-1">Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="evidence" href="evidenceq.html"><span class="material-symbols-outlined text-[20px]">lock_clock</span><span class="font-body-md text-body-md flex-1">Evidence</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="geographic-map" href="map.html"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md flex-1">Geographic Map</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md flex-1">AI Assistant</span><span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary">ONLINE</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports" href="report.html"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md flex-1">Reports</span></a></nav></div><div class="px-space-xs flex flex-col gap-space-xs"><nav class="flex flex-col" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md flex-1">Settings</span></a></nav><div class="mx-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">SECNET V4.2 ENCRYPTED</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between gap-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex-1 max-w-xl"><div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search person, phone, vehicle, location or case..." type="text"/><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span class="font-semibold">⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_rgba(77,142,255,0.8)]"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm px-space-xs py-space-2xs rounded-lg bg-surface-container-low"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Agent Miller</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Investigator - Analyst</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-md"><div class="flex flex-col w-full gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-tertiary">
+<span class="material-symbols-outlined text-[18px]">route</span>
+<span class="font-label-sm text-label-sm uppercase tracking-wider">Tactical Graph Synthesis</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Connection Finder</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Analyze relational paths, intermediate hops, and cross-case conduits between two target entities.
+      </p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto">
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded-lg bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span>ENGINE: DUAL-DIJKSTRA v9.1</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs rounded-lg bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[16px]">database</span>
+<span>38,409 NODES INDEXED</span>
+</div>
+</div>
+</div>
+<section class="rounded-xl bg-surface-container-low p-space-lg shadow-xl relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-primary-container/10 blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-center">
+<div class="lg:col-span-5 flex flex-col gap-space-2xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase flex items-center justify-between">
+<span>Origin Entity</span>
+<span class="text-tertiary">Target #1</span>
+</label>
+<div class="relative flex items-center bg-surface-container rounded-lg p-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shrink-0 mr-space-xs">
+<span class="material-symbols-outlined text-[20px]">person</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-xs">
+<div class="font-body-md text-body-md text-on-surface font-semibold truncate">David Chen</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">ID: US-TGT-9042 • Suspect • Narcotics Division</div>
+</div>
+<button class="p-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" title="Change target">
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-2 flex flex-col items-center justify-center">
+<button class="p-space-xs rounded-full bg-surface-container-high hover:bg-surface-container-highest text-primary transition-all duration-200 shadow-md group" id="swap-entities" title="Swap Endpoints">
+<span class="material-symbols-outlined text-[22px] group-hover:rotate-180 transition-transform duration-300">swap_horiz</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1 hidden lg:block">BIDIRECTIONAL</span>
+</div>
+<div class="lg:col-span-5 flex flex-col gap-space-2xs">
+<label class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase flex items-center justify-between">
+<span>Destination Entity</span>
+<span class="text-tertiary">Case #408 Subject</span>
+</label>
+<div class="relative flex items-center bg-surface-container rounded-lg p-space-xs">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest flex items-center justify-center text-tertiary shrink-0 mr-space-xs">
+<span class="material-symbols-outlined text-[20px]">domain</span>
+</div>
+<div class="flex-1 min-w-0 pr-space-xs">
+<div class="font-body-md text-body-md text-on-surface font-semibold truncate">Apex Global Holdings LLC</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate">CORP-SEC-3990-DE • Shell Entity • Port Logistics</div>
+</div>
+<button class="p-space-2xs text-on-surface-variant hover:text-on-surface transition-colors" title="Change target">
+<span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-md">
+<div class="flex flex-wrap items-center gap-space-md">
+<div class="flex items-center gap-space-sm bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Max Depth:</span>
+<div class="flex items-center gap-space-xs">
+<input class="accent-primary h-1.5 bg-surface-container-highest rounded-lg cursor-pointer w-24" id="hop-slider" max="6" min="1" type="range" value="4"/>
+<span class="font-label-sm text-label-sm text-primary font-semibold" id="hop-display">4 Hops (Deep Search)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs bg-surface-container px-space-sm py-space-xs rounded-lg">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px]">verified_user</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Min Confidence:</span>
+<span class="font-label-sm text-label-sm text-tertiary font-semibold">85%+ Only</span>
+</div>
+<label class="flex items-center gap-space-xs cursor-pointer select-none">
+<input checked="" class="rounded bg-surface-container-highest text-primary focus:ring-0" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Include cross-jurisdiction wiretaps</span>
+</label>
+</div>
+<button class="inline-flex items-center justify-center gap-space-xs px-space-lg py-space-xs rounded-lg bg-primary-container text-on-primary font-body-md text-body-md font-semibold hover:bg-primary transition-all duration-200 shadow-[0_0_16px_rgba(77,142,255,0.35)] shrink-0">
+<span class="material-symbols-outlined text-[20px]">auto_fix_high</span>
+<span>Find Connection</span>
+</button>
+</div>
+</div>
+</section>
+<section class="flex flex-col gap-space-md">
+<div class="rounded-xl bg-surface-container-low p-space-md flex flex-col md:flex-row md:items-center justify-between gap-space-sm shadow-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-tertiary-container/30 text-tertiary flex items-center justify-center">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">Optimal Path Identified: 4 hops</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-tertiary font-label-sm text-label-sm uppercase">Direct Corroborated</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">High-fidelity relational chain synthesized across 5 evidentiary sources</span>
+</div>
+</div>
+<div class="flex items-center gap-space-md self-end md:self-auto">
+<div class="flex flex-col items-end">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Synthesis Confidence</span>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-md text-headline-md text-tertiary font-bold">96%</span>
+<div class="w-16 h-2 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-tertiary rounded-full w-[96%] shadow-[0_0_8px_rgba(76,215,246,0.6)]"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-lg">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface font-headline-sm text-headline-sm font-semibold">
+<span class="material-symbols-outlined text-primary text-[22px]">schema</span>
+<span>Kinetic Link Diagram</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<button class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">fit_screen</span> Fit View
+          </button>
+<button class="px-space-xs py-space-2xs rounded bg-surface-container text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm flex items-center gap-1 transition-colors">
+<span class="material-symbols-outlined text-[16px]">layers</span> Overlay Geospatial
+          </button>
+</div>
+</div>
+<div class="relative w-full overflow-x-auto pb-space-sm pt-space-xs">
+<div class="min-w-[1040px] flex items-center justify-between relative px-space-xs">
+<div class="relative z-10 flex flex-col items-center group w-48">
+<div class="w-full rounded-lg bg-surface-container p-space-sm shadow-md hover:shadow-primary/20 transition-all duration-200 cursor-pointer">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">STEP 01</span>
+<span class="material-symbols-outlined text-primary text-[18px]">person</span>
+</div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface truncate">David Chen</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">POI #1 • Narcotics</div>
+<div class="mt-space-xs pt-space-2xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Priority</span>
+<span class="text-error font-semibold">ALPHA</span>
+</div>
+</div>
+<div class="mt-space-xs flex items-center gap-1 text-primary">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-ping"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Origin</span>
+</div>
+</div>
+<div class="flex-1 flex flex-col items-center px-space-xs relative">
+<div class="w-full h-0.5 bg-gradient-to-r from-primary via-tertiary to-tertiary relative">
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(76,215,246,0.9)]"></div>
+</div>
+<div class="mt-space-xs px-space-xs py-1 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm text-center shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">call</span>
+<span>Wiretap Calls (28x)</span>
+</div>
+<span class="font-label-sm text-[0.625rem] text-on-surface-variant mt-1">Direct Audio Intercept</span>
+</div>
+<div class="relative z-10 flex flex-col items-center group w-48">
+<div class="w-full rounded-lg bg-surface-container p-space-sm shadow-md hover:shadow-tertiary/20 transition-all duration-200 cursor-pointer">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">STEP 02</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">phone_iphone</span>
+</div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface truncate">+1 (555) 349-0128</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Burner SIM / T-Mob</div>
+<div class="mt-space-xs pt-space-2xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>IMSI</span>
+<span class="text-on-surface font-mono">310260...449</span>
+</div>
+</div>
+<div class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase">Hop 1 Conduit</div>
+</div>
+<div class="flex-1 flex flex-col items-center px-space-xs relative">
+<div class="w-full h-0.5 bg-gradient-to-r from-tertiary via-tertiary to-secondary relative">
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(180,197,255,0.9)]"></div>
+</div>
+<div class="mt-space-xs px-space-xs py-1 rounded bg-surface-container-high text-secondary font-label-sm text-label-sm text-center shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">badge</span>
+<span>Subscriber / Co-Travel</span>
+</div>
+<span class="font-label-sm text-[0.625rem] text-on-surface-variant mt-1">Cell Tower Triangulation</span>
+</div>
+<div class="relative z-10 flex flex-col items-center group w-48">
+<div class="w-full rounded-lg bg-surface-container p-space-sm shadow-md hover:shadow-secondary/20 transition-all duration-200 cursor-pointer">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="px-space-xs py-0.5 rounded bg-secondary/10 text-secondary font-label-sm text-label-sm font-semibold">STEP 03</span>
+<span class="material-symbols-outlined text-secondary text-[18px]">person_search</span>
+</div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface truncate">Elena Rostova</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Broker • Case #392</div>
+<div class="mt-space-xs pt-space-2xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Passport</span>
+<span class="text-on-surface font-mono">EST-55928</span>
+</div>
+</div>
+<div class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase">Pivot Node</div>
+</div>
+<div class="flex-1 flex flex-col items-center px-space-xs relative">
+<div class="w-full h-0.5 bg-gradient-to-r from-secondary via-primary-container to-primary relative">
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full bg-primary shadow-[0_0_8px_rgba(173,198,255,0.9)]"></div>
+</div>
+<div class="mt-space-xs px-space-xs py-1 rounded bg-surface-container-high text-primary font-label-sm text-label-sm text-center shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">directions_car</span>
+<span>Leasee &amp; Driver</span>
+</div>
+<span class="font-label-sm text-[0.625rem] text-on-surface-variant mt-1">Commercial Agreement</span>
+</div>
+<div class="relative z-10 flex flex-col items-center group w-48">
+<div class="w-full rounded-lg bg-surface-container p-space-sm shadow-md hover:shadow-primary/20 transition-all duration-200 cursor-pointer">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="px-space-xs py-0.5 rounded bg-primary/10 text-primary font-label-sm text-label-sm font-semibold">STEP 04</span>
+<span class="material-symbols-outlined text-primary text-[18px]">commute</span>
+</div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface truncate">Sedan [CA 8XYZ21]</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">2024 Black Mercedes S580</div>
+<div class="mt-space-xs pt-space-2xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>VIN</span>
+<span class="text-on-surface font-mono">WDD223...901</span>
+</div>
+</div>
+<div class="mt-space-xs font-label-sm text-label-sm text-on-surface-variant uppercase">Material Asset</div>
+</div>
+<div class="flex-1 flex flex-col items-center px-space-xs relative">
+<div class="w-full h-0.5 bg-gradient-to-r from-primary to-tertiary relative">
+<div class="absolute -top-1 right-0 w-2 h-2 rounded-full bg-tertiary shadow-[0_0_8px_rgba(76,215,246,0.9)]"></div>
+</div>
+<div class="mt-space-xs px-space-xs py-1 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm text-center shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">corporate_fare</span>
+<span>Fleet Asset</span>
+</div>
+<span class="font-label-sm text-[0.625rem] text-on-surface-variant mt-1">Commercial Title</span>
+</div>
+<div class="relative z-10 flex flex-col items-center group w-48">
+<div class="w-full rounded-lg bg-surface-container p-space-sm shadow-md hover:shadow-tertiary/20 transition-all duration-200 cursor-pointer">
+<div class="flex items-center justify-between mb-space-2xs">
+<span class="px-space-xs py-0.5 rounded bg-tertiary/10 text-tertiary font-label-sm text-label-sm font-semibold">STEP 05</span>
+<span class="material-symbols-outlined text-tertiary text-[18px]">domain</span>
+</div>
+<div class="font-headline-sm text-body-md font-semibold text-on-surface truncate">Apex Global LLC</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant truncate mt-0.5">Case #408 • Syndicate</div>
+<div class="mt-space-xs pt-space-2xs flex items-center justify-between font-label-sm text-label-sm text-on-surface-variant">
+<span>Status</span>
+<span class="text-tertiary font-semibold">ACTIVE SUBJ</span>
+</div>
+</div>
+<div class="mt-space-xs flex items-center gap-1 text-tertiary">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary animate-ping"></span>
+<span class="font-label-sm text-label-sm tracking-wider uppercase font-semibold">Destination</span>
+</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm pt-space-sm">
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">timeline</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Total Hops</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">4 Conduit Links</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">folder_shared</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Correlated Cases</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">2 (#408 &amp; #392)</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">source</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Evidence Sources</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">5 Confirmed Leads</span>
+</div>
+</div>
+<div class="bg-surface-container p-space-sm rounded-lg flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container">
+<span class="material-symbols-outlined text-[18px]">graphic_eq</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Strongest Link</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold">CDR Telemetry</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-md items-start">
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="rounded-xl bg-surface-container-low p-space-lg shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[22px]">policy</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Supporting Evidentiary Ledger</h2>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4 VERIFIED CHAIN ARTIFACTS</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-error shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">Wiretap_Transcript_Log_Case408.pdf</span>
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-medium">Verified Audio</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Page 14, Line 22 • Corroborates direct Chen to SIM +1 (555) 349-0128 transmission frequency</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">08/14 19:42:10</span>
+<button class="p-space-2xs text-on-surface-variant hover:text-primary rounded" title="View Source">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">table_chart</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">Carrier_Subpoena_Records_Aug2026.csv</span>
+<span class="px-space-xs py-0.5 rounded bg-primary-container/20 text-primary font-label-sm text-label-sm font-medium">Subpoena Verified</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Record #8821 • Direct subscriber match linking burner SIM account to credit instrument of Elena Rostova</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">08/16 09:12:00</span>
+<button class="p-space-2xs text-on-surface-variant hover:text-primary rounded" title="View Source">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-error shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">DMV_Vehicle_Registration_Query.pdf</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container/30 text-secondary font-label-sm text-label-sm font-medium">Official Record</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Page 2 • Identifies CA 8XYZ21 titled to Apex Global Holdings LLC; master lessee listed as Elena Rostova</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">08/19 14:30:45</span>
+<button class="p-space-2xs text-on-surface-variant hover:text-primary rounded" title="View Source">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm hover:bg-surface-container-high transition-colors">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-code-md text-code-md text-on-surface font-semibold truncate">Pier14_CCTV_Surveillance_Log.docx</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-medium">Site ALPR</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Timecode 22:14:09 • Automated optical plate reader corroborates vehicle CA 8XYZ21 on terminal slipway</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs shrink-0 self-end sm:self-auto">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">08/21 22:14:09</span>
+<button class="p-space-2xs text-on-surface-variant hover:text-primary rounded" title="View Source">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</div>
+<div class="pt-space-xs flex flex-wrap items-center justify-end gap-space-sm">
+<button class="px-space-md py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface font-body-md text-body-md font-semibold transition-colors flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px]">download</span>
+<span>Export Path Briefing (PDF)</span>
+</button>
+<button class="px-space-md py-space-xs rounded-lg bg-primary-container text-on-primary hover:bg-primary font-body-md text-body-md font-semibold transition-colors flex items-center gap-space-xs shadow-md">
+<span class="material-symbols-outlined text-[18px]">push_pin</span>
+<span>Pin Path to Investigation Canvas</span>
+</button>
+</div>
+</div>
+</div>
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs text-on-surface">
+<span class="material-symbols-outlined text-tertiary text-[20px]">pin_drop</span>
+<span class="font-headline-sm text-headline-sm font-semibold">Corridor Geography</span>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary">SF BAY / PORT SECTOR</span>
+</div>
+<div class="w-full h-44 rounded-lg bg-cover bg-center relative overflow-hidden shadow-inner flex items-end p-space-xs" data-location="San Francisco Port Terminal Pier 14 California" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDSoMGsfOQ8usnOgCiC53XJ_fW_nFkFWrlPULm2UBgvGKdlaxqJbq6yTl2Y8CFpTnd0AFiws9sMxIurfIh6F3zb8A7nDT55QzUZ4OlEZu3gbzsTrsC4nXu9qETr2piGf7nU4K3fp6RAvfkJyrImws4m9-x4A-M2DzOuGfEMCjbKePQ0idYjZJ01386JWdJduR9NsHpN6z49LN-6eOsOA467l_yQM4qtzwRkgFoq9b-dbZY8XwUTD5QU')">
+<div class="w-full rounded bg-surface-container-lowest/80 backdrop-blur-md px-space-xs py-1 flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold truncate">Pier 14 Terminal Logistics Corridor</span>
+<span class="font-label-sm text-label-sm text-tertiary shrink-0">4 Intercepts</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs pt-space-2xs">
+<div class="flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-on-surface-variant">Relational Density</span>
+<span class="text-on-surface font-semibold">8.4 / 10 (Critical)</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container-highest overflow-hidden">
+<div class="h-full bg-primary-container rounded-full w-[84%]"></div>
+</div>
+</div>
+<div class="rounded-lg bg-surface-container p-space-sm flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs text-primary font-label-sm text-label-sm uppercase font-semibold">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+<span>AI Synthesizer Note</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            Elimination of intermediate node <span class="text-on-surface font-semibold">Elena Rostova</span> severs direct attribution between Target Chen and the Apex shell holding. Recommendation: authorize warrant on SIM IMSI-310260 before asset rotation.
+          </p>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-space-md shadow-xl flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container-highest text-tertiary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[20px]">share</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Secondary Path (6 hops)</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Via Offshore Wire Transfer #TX-88</span>
+</div>
+</div>
+<button class="px-space-xs py-space-2xs rounded bg-surface-container text-primary hover:bg-surface-container-high font-label-sm text-label-sm font-semibold transition-colors">
+          Inspect
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initConnectionFinder() {
+    const slider = document.getElementById('hop-slider');
+    const display = document.getElementById('hop-display');
+    const swapBtn = document.getElementById('swap-entities');
+
+    if (slider && display) {
+      slider.addEventListener('input', function(e) {
+        const val = e.target.value;
+        const labels = {
+          '1': '1 Hop (Direct Only)',
+          '2': '2 Hops (Immediate)',
+          '3': '3 Hops (Intermediate)',
+          '4': '4 Hops (Deep Search)',
+          '5': '5 Hops (Comprehensive)',
+          '6': '6 Hops (Exhaustive Scan)'
+        };
+        display.textContent = labels[val] || `${val} Hops`;
+      });
+    }
+
+    if (swapBtn) {
+      swapBtn.addEventListener('click', function() {
+        swapBtn.classList.add('scale-95');
+        setTimeout(() => swapBtn.classList.remove('scale-95'), 150);
+      });
+    }
+  })();
+</script></main></div></body></html>

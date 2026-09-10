@@ -1,0 +1,555 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>NetTrace AI - Upload Investigation Case</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<style>
+  @layer base {
+    html, body { margin: 0; padding: 0; }
+    body { overscroll-behavior: none; }
+    main > :first-child { margin-top: 0 !important; }
+    main > :last-child { margin-bottom: 0 !important; }
+  }
+  ::-webkit-scrollbar { display: none; }
+</style>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface": "#051424",
+          "inverse-primary": "#005ac2",
+          "surface-dim": "#051424",
+          "on-primary-fixed": "#001a42",
+          "primary": "#adc6ff",
+          "on-secondary-container": "#cdd7ff",
+          "on-primary-container": "#00285d",
+          "surface-container-lowest": "#010f1f",
+          "surface-container-high": "#1c2b3c",
+          "secondary": "#b4c5ff",
+          "surface-container": "#122131",
+          "on-secondary": "#002a78",
+          "on-surface": "#d4e4fa",
+          "on-tertiary-container": "#002f38",
+          "error-container": "#93000a",
+          "tertiary-container": "#009eb9",
+          "tertiary-fixed-dim": "#4cd7f6",
+          "on-secondary-fixed": "#00174b",
+          "tertiary-fixed": "#acedff",
+          "on-tertiary-fixed": "#001f26",
+          "error": "#ffb4ab",
+          "on-secondary-fixed-variant": "#003ea8",
+          "surface-container-highest": "#273647",
+          "on-primary": "#002e6a",
+          "outline-variant": "#424754",
+          "primary-fixed": "#d8e2ff",
+          "secondary-container": "#0053db",
+          "surface-variant": "#273647",
+          "on-tertiary-fixed-variant": "#004e5c",
+          "inverse-surface": "#d4e4fa",
+          "surface-container-low": "#0d1c2d",
+          "primary-fixed-dim": "#adc6ff",
+          "surface-bright": "#2c3a4c",
+          "on-background": "#d4e4fa",
+          "background": "#051424",
+          "on-tertiary": "#003640",
+          "tertiary": "#4cd7f6",
+          "primary-container": "#4d8eff",
+          "secondary-fixed-dim": "#b4c5ff",
+          "outline": "#8c909f",
+          "inverse-on-surface": "#233143",
+          "on-surface-variant": "#c2c6d6",
+          "on-primary-fixed-variant": "#004395",
+          "surface-tint": "#adc6ff",
+          "on-error": "#690005",
+          "secondary-fixed": "#dbe1ff",
+          "on-error-container": "#ffdad6"
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem",
+          lg: "0.5rem",
+          xl: "0.75rem",
+          full: "9999px"
+        },
+        spacing: {
+          "space-2xs": "0.25rem",
+          "space-xs": "0.5rem",
+          "space-sm": "0.75rem",
+          "space-md": "1rem",
+          "space-lg": "1.5rem",
+          "space-xl": "2rem",
+          "space-2xl": "3rem",
+          "gutter-compact": "0.75rem",
+          "gutter-default": "1rem",
+          "gutter-expanded": "1.5rem"
+        },
+        fontFamily: {
+          "headline-lg": ["Geist"],
+          "headline-md": ["Geist"],
+          "headline-sm": ["Geist"],
+          "display-lg": ["Geist"],
+          "body-lg": ["Inter"],
+          "body-md": ["Inter"],
+          "body-sm": ["Inter"],
+          "label-md": ["JetBrains Mono"],
+          "label-sm": ["JetBrains Mono"],
+          "code-md": ["JetBrains Mono"]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-surface font-body-md text-body-md text-on-surface antialiased min-h-screen">
+<!-- BEGIN: Left Fixed Sidebar -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest z-50 flex flex-col justify-between p-space-md border-r border-outline-variant/30"><div class="flex flex-col gap-space-lg">
+  <!-- Brand Tactical Header -->
+  <div class="flex items-center gap-space-sm px-1 py-1">
+    <div class="w-9 h-9 rounded-lg bg-secondary-container flex items-center justify-center shadow-[0_0_16px_rgba(0,83,219,0.5)] border border-primary/30 flex-shrink-0">
+      <span class="material-symbols-outlined text-white text-[20px]">hub</span>
+    </div>
+    <div class="flex flex-col">
+      <div class="flex items-center gap-1.5">
+        <span class="font-headline-sm text-[16px] font-bold tracking-tight text-white">NetTrace</span>
+        <span class="px-1.5 py-0.2 rounded bg-tertiary-container/30 text-tertiary text-[10px] font-bold tracking-wider">AI</span>
+      </div>
+      <span class="text-[10px] font-medium tracking-wider text-on-surface-variant/80 uppercase">TACTICAL CORE</span>
+    </div>
+  </div>
+
+  <!-- Navigation Links -->
+  <nav class="flex flex-col gap-1">
+    <!-- 1. Dashboard -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="home.html">
+      <span class="material-symbols-outlined text-[18px]">grid_view</span>
+      <span class="">Dashboard</span>
+    </a>
+    <!-- 2. Upload Case (ACTIVE) -->
+    <a aria-current="page" class="flex items-center gap-3 px-3 py-2 rounded-lg text-white bg-secondary-container font-medium shadow-[0_0_14px_rgba(0,83,219,0.45)] transition-colors text-body-sm" href="upload.html">
+      <span class="material-symbols-outlined text-[18px]">upload_file</span>
+      <span class="">Upload Case</span>
+    </a>
+    <!-- 3. Network Explorer -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">account_tree</span>
+      <span class="">Network Explorer</span>
+    </a>
+    <!-- 4. Connection Finder -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">route</span>
+      <span class="">Connection Finder</span>
+    </a>
+    <!-- 5. Timeline -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">timeline</span>
+      <span class="">Timeline</span>
+    </a>
+    <!-- 6. Evidence -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">folder</span>
+      <span class="">Evidence</span>
+    </a>
+    <!-- 7. Geographic Map -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">map</span>
+      <span class="">Geographic Map</span>
+    </a>
+    <!-- 8. AI Assistant -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">smart_toy</span>
+      <span class="">AI Assistant</span>
+    </a>
+    <!-- 9. Reports -->
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">lab_profile</span>
+      <span class="">Reports</span>
+    </a>
+  </nav>
+</div>
+
+<!-- Bottom Section -->
+<div class="flex flex-col gap-space-xs pt-space-md border-t border-outline-variant/30">
+  <nav class="flex flex-col mb-1">
+    <a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant hover:text-white hover:bg-surface-container transition-colors text-body-sm font-medium" href="#">
+      <span class="material-symbols-outlined text-[18px]">settings</span>
+      <span class="">Settings</span>
+    </a>
+  </nav>
+  <div class="flex items-center justify-between px-space-sm py-2 rounded-lg bg-surface-container-low border border-outline-variant/20">
+    <div class="flex items-center gap-2">
+      <span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+      <span class="text-[11px] uppercase tracking-wider font-semibold text-on-surface-variant">SECNET V4.2</span>
+    </div>
+    <span class="text-[10px] font-semibold text-tertiary bg-surface-container-high px-1.5 py-0.5 rounded border border-outline-variant/30 tracking-wider">ENCRYPTED</span>
+  </div>
+</div></aside>
+<!-- END: Left Fixed Sidebar -->
+<!-- BEGIN: Main View Wrapper -->
+<div class="pl-64">
+<!-- Top Navigation Header -->
+<header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-low/90 backdrop-blur-xl z-40 px-gutter-expanded flex items-center justify-between border-b border-outline-variant/30">
+<!-- Command Search Bar -->
+<div class="flex-1 max-w-2xl">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-sm text-outline pointer-events-none text-[20px]">search</span>
+<input class="w-full h-10 pl-10 pr-16 bg-surface-container text-on-surface placeholder-on-surface-variant/60 font-body-sm text-body-sm rounded-lg border border-outline-variant/30 focus:outline-none focus:border-secondary transition-all" placeholder="Search person, phone, vehicle, location or case..." type="text">
+<div class="absolute right-space-sm flex items-center gap-space-2xs pointer-events-none">
+<kbd class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant border border-outline-variant/40">⌘K</kbd>
+</div>
+</div>
+</div>
+<!-- Right Header Utilities -->
+<div class="flex items-center gap-space-md">
+<!-- Notification Bell -->
+<button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button">
+<span class="material-symbols-outlined text-[22px]">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span>
+</button>
+<div class="h-6 w-px bg-outline-variant/30"></div>
+<!-- Investigator Profile -->
+<div class="flex items-center gap-space-sm pl-space-2xs pr-space-xs py-space-2xs rounded-lg hover:bg-surface-container cursor-pointer transition-colors">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-white border border-primary/30">
+<span class="material-symbols-outlined text-[18px]">person</span>
+</div>
+<div class="flex flex-col text-left">
+<span class="font-body-sm text-body-sm font-medium text-on-surface leading-tight">Agent Miller</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Investigator - Analyst</span>
+</div>
+</div>
+</div>
+</header>
+<!-- BEGIN: Main Page Content -->
+<main class="relative pt-16 bg-surface min-h-screen px-gutter-expanded py-space-lg">
+<div class="flex flex-col w-full gap-space-lg max-w-7xl mx-auto">
+<!-- SECTION 1: Page Header Section -->
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs flex-wrap">
+<h1 class="font-display-lg text-display-lg text-on-surface tracking-tight font-semibold">Upload Investigation Case</h1>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-tertiary font-label-sm text-label-sm border border-outline-variant/30 uppercase tracking-wide">Live Pipeline</span>
+<span class="px-2 py-0.5 rounded bg-surface-container text-secondary font-label-sm text-label-sm border border-outline-variant/30">Case #408 - Active Intake</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+            Upload case documents, logs, surveillance media, and intelligence dossiers for automated entity extraction and relational mapping.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap self-start lg:self-auto">
+<div class="flex items-center gap-space-xs px-3 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/30 text-label-sm text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+<span class="font-label-sm uppercase tracking-wider text-on-surface font-medium">Pipeline Ready</span>
+</div>
+<div class="px-3 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/30 text-label-sm font-mono text-tertiary">
+            MAX 150MB / FILE
+          </div>
+</div>
+</div>
+<!-- SECTION 2: Drag & Drop Upload Zone -->
+<section class="rounded-xl bg-surface-container-low border border-outline-variant/30 p-space-lg shadow-sm">
+<!-- Interactive Drop Area -->
+<div class="border-2 border-dashed border-primary/30 hover:border-tertiary rounded-xl p-8 lg:p-10 text-center transition-all bg-surface-container-lowest/60 hover:bg-surface-container-lowest cursor-pointer group relative overflow-hidden">
+<div class="w-14 h-14 mx-auto rounded-xl bg-secondary-container/20 border border-primary/30 flex items-center justify-center text-primary group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(77,142,255,0.25)]">
+<span class="material-symbols-outlined text-[32px] text-tertiary">cloud_upload</span>
+</div>
+<h3 class="mt-4 font-headline-md text-headline-md font-semibold text-on-surface tracking-tight">
+            Drag &amp; Drop files here or Choose File
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1.5 max-w-lg mx-auto">
+            Supports PDF, DOCX, CSV, XLSX, JPG, and PNG evidentiary files (Max 150MB per file)
+          </p>
+<div class="mt-5 flex items-center justify-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-space-2xs px-space-md py-2 rounded-lg bg-secondary-container hover:bg-primary-container text-on-secondary hover:text-on-primary font-body-sm text-body-sm font-medium transition-all shadow-[0_0_14px_rgba(0,83,219,0.4)]" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span class="">Choose File</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">or browse evidence vault</span>
+</div>
+<div class="mt-4 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-label-sm text-on-surface-variant border border-outline-variant/30 font-mono">
+<span class="material-symbols-outlined text-[15px] text-tertiary">verified_user</span>
+            Automated OCR + AI Entity Resolution Enabled
+          </div>
+</div>
+<!-- Uploaded file item preview -->
+<div class="mt-space-lg pt-space-md border-t border-outline-variant/20">
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-2 font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-medium">
+<span class="w-2 h-2 rounded-full bg-tertiary"></span>
+              Uploaded Intake Document
+            </div>
+<span class="font-code-md text-code-md text-on-surface-variant">1 File Ready</span>
+</div>
+<div class="bg-surface-container rounded-xl p-4 border border-outline-variant/30 flex flex-col md:flex-row md:items-center justify-between gap-4 hover:border-outline-variant/60 transition-all">
+<div class="flex items-center gap-space-sm min-w-0">
+<!-- File Badge -->
+<div class="w-12 h-12 rounded-lg bg-surface-container-high border border-outline-variant/40 flex flex-col items-center justify-center text-error flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">picture_as_pdf</span>
+<span class="font-label-sm text-[9px] uppercase -mt-0.5 font-bold">PDF</span>
+</div>
+<!-- Details -->
+<div class="min-w-0">
+<div class="flex items-center gap-2.5 flex-wrap">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate text-[0.95rem]">Wiretap_Transcript_Log_Case408.pdf</span>
+<span class="inline-flex items-center gap-1 text-[11px] font-medium text-emerald-400 bg-emerald-950/60 border border-emerald-500/30 px-2 py-0.5 rounded-md">
+<span class="material-symbols-outlined text-[13px]">check_circle</span>
+                    Ready for Ingestion
+                  </span>
+</div>
+<div class="flex items-center gap-2 sm:gap-3 mt-1 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
+<span class="font-code-md text-code-md text-secondary">14.2 MB</span>
+<span class="text-outline-variant">·</span>
+<span class="">Ingested by <strong class="text-on-surface font-medium">Miller</strong></span>
+<span class="text-outline-variant">·</span>
+<span class="font-code-md text-[11px] text-tertiary bg-surface-container-highest/60 px-2 py-0.5 rounded border border-outline-variant/30">
+                    SHA-256: 8f2c...49a1
+                  </span>
+</div>
+</div>
+</div>
+<!-- Action buttons -->
+<div class="flex items-center gap-space-xs self-end md:self-auto flex-shrink-0">
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm border border-outline-variant/30 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-outline">visibility</span>
+<span class="">View</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-surface-bright text-on-surface font-body-sm text-body-sm border border-outline-variant/30 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary">autorenew</span>
+<span class="">Re-extract</span>
+</button>
+<button class="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-error-container/30 hover:bg-error-container/50 text-error font-body-sm text-body-sm border border-error/30 transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">delete</span>
+<span class="">Remove</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Processing Pipeline Section (4 Status Metric Cards) -->
+<section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-md">
+<!-- Card 1 -->
+<div class="rounded-xl bg-surface-container-low border border-outline-variant/30 p-space-md flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Language Detected</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mt-1">English (US)</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-emerald-400 border border-outline-variant/30">
+<span class="material-symbols-outlined text-[20px]">translate</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs border-t border-outline-variant/20">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="font-code-md text-code-md text-emerald-400 font-medium">100% Confidence</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="rounded-xl bg-surface-container-low border border-outline-variant/30 p-space-md flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">OCR Completed</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mt-1">38 Pages</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[20px]">document_scanner</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs border-t border-outline-variant/20">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80">Scanned &amp; Transcribed</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="rounded-xl bg-surface-container-low border border-outline-variant/30 p-space-md flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Entities Extracted</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mt-1">42 Entities</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary-fixed border border-outline-variant/30">
+<span class="material-symbols-outlined text-[20px]">fingerprint</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs border-t border-outline-variant/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80">Identified targets &amp; entities</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="rounded-xl bg-surface-container-low border border-outline-variant/30 p-space-md flex flex-col justify-between relative overflow-hidden shadow-sm">
+<div class="flex items-start justify-between">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant">Relationships Found</span>
+<span class="font-headline-md text-headline-md font-semibold text-on-surface leading-snug mt-1">19 Links</span>
+</div>
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-tertiary-fixed border border-outline-variant/30">
+<span class="material-symbols-outlined text-[20px]">hub</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs mt-space-md pt-space-xs border-t border-outline-variant/20">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm text-on-surface-variant/80">Correlated relationships</span>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Extracted Information Section (Extracted Case Intelligence) -->
+<section class="rounded-xl bg-surface-container-low border border-outline-variant/30 shadow-sm flex flex-col p-space-md lg:p-space-lg gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm border-b border-outline-variant/30 pb-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary border border-outline-variant/30">
+<span class="material-symbols-outlined text-[20px]">radar</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md font-semibold text-on-surface">Extracted Case Intelligence</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Discovered targets, numbers, locations, and vehicles mapped for network expansion</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-surface-container font-label-sm text-label-sm text-tertiary border border-outline-variant/30 font-mono">
+              CONFIDENCE FLOOR &gt; 94%
+            </span>
+</div>
+</div>
+<!-- 5 Categorized Columns/Badges Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-space-md">
+<!-- Category 1: Persons -->
+<div class="rounded-xl bg-surface-container p-space-sm border border-outline-variant/30 flex flex-col justify-between hover:border-secondary/50 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface tracking-wider">Persons</span>
+</div>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-high text-secondary border border-outline-variant/30">3</span>
+</div>
+<div class="space-y-1.5">
+<div class="flex items-center justify-between px-2.5 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">David Chen</span>
+<span class="font-label-sm text-[10px] text-tertiary bg-surface-container-highest px-1.5 py-0.5 rounded border border-outline-variant/30">Target #1</span>
+</div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors">
+                  Elena Rostova
+                </div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors">
+                  Marcus Vance
+                </div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant/70 pt-2 border-t border-outline-variant/20 mt-3 text-right">3 Identified</span>
+</div>
+<!-- Category 2: Phone Numbers -->
+<div class="rounded-xl bg-surface-container p-space-sm border border-outline-variant/30 flex flex-col justify-between hover:border-purple-400/50 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-purple-400"></span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface tracking-wider">Phone Numbers</span>
+</div>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-high text-purple-300 border border-outline-variant/30">2</span>
+</div>
+<div class="space-y-1.5">
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 font-code-md text-code-md text-purple-200">
+                  +1 (555) 349-0128
+                </div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/20 font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors">
+                  +1 (555) 019-2834
+                </div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant/70 pt-2 border-t border-outline-variant/20 mt-3 text-right">Carrier Flagged</span>
+</div>
+<!-- Category 3: Locations -->
+<div class="rounded-xl bg-surface-container p-space-sm border border-outline-variant/30 flex flex-col justify-between hover:border-emerald-400/50 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-400"></span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface tracking-wider">Locations</span>
+</div>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-high text-emerald-300 border border-outline-variant/30">2</span>
+</div>
+<div class="space-y-1.5">
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 font-body-sm text-body-sm font-medium text-on-surface truncate">
+                  Pier 14 Logistics Dock
+                </div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant truncate hover:text-on-surface transition-colors">
+                  Warehouse #14
+                </div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant/70 pt-2 border-t border-outline-variant/20 mt-3 text-right">2 Coordinates</span>
+</div>
+<!-- Category 4: Vehicles -->
+<div class="rounded-xl bg-surface-container p-space-sm border border-outline-variant/30 flex flex-col justify-between hover:border-amber-400/50 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-amber-400"></span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface tracking-wider">Vehicles</span>
+</div>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-high text-amber-300 border border-outline-variant/30">2</span>
+</div>
+<div class="space-y-1.5">
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 font-code-md text-code-md text-amber-200">
+                  Sedan [CA 8XYZ21]
+                </div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/20 font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors">
+                  Midnight Blue SUV
+                </div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant/70 pt-2 border-t border-outline-variant/20 mt-3 text-right">Plates Queried</span>
+</div>
+<!-- Category 5: Cases -->
+<div class="rounded-xl bg-surface-container p-space-sm border border-outline-variant/30 flex flex-col justify-between hover:border-cyan-400/50 transition-colors">
+<div>
+<div class="flex items-center justify-between mb-3">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-cyan-400"></span>
+<span class="font-label-sm text-label-sm uppercase font-semibold text-on-surface tracking-wider">Cases</span>
+</div>
+<span class="font-code-md text-code-md px-1.5 py-0.5 rounded bg-surface-container-high text-cyan-300 border border-outline-variant/30">2</span>
+</div>
+<div class="space-y-1.5">
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-high border border-outline-variant/40 font-code-md text-code-md text-cyan-200">
+                  Case #408
+                </div>
+<div class="px-2.5 py-1.5 rounded-lg bg-surface-container-low border border-outline-variant/20 font-code-md text-code-md text-on-surface-variant hover:text-on-surface transition-colors">
+                  Case #392
+                </div>
+</div>
+</div>
+<span class="font-label-sm text-[11px] text-on-surface-variant/70 pt-2 border-t border-outline-variant/20 mt-3 text-right">Relational Ties</span>
+</div>
+</div>
+<!-- Section Footer Action Bar -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-sm pt-space-md border-t border-outline-variant/30">
+<div class="flex items-center gap-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] text-tertiary">info</span>
+<span class="">Synthesized graph nodes ready to be committed to Case #408 investigation canvas.</span>
+</div>
+<div class="flex items-center gap-space-sm w-full sm:w-auto justify-end">
+<!-- Review Data Button (Secondary Outline) -->
+<button class="flex items-center justify-center gap-space-2xs px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface border border-outline-variant/30 font-body-sm text-body-sm font-medium transition-colors" type="button">
+<span class="material-symbols-outlined text-[18px] text-outline">tune</span>
+<span class="">Review Data</span>
+</button>
+<!-- Add to Network Button (Primary Blue) -->
+<button class="flex items-center justify-center gap-space-2xs px-space-lg py-2 rounded-lg bg-secondary-container hover:bg-primary-container text-white font-body-sm text-body-sm font-semibold transition-all shadow-[0_0_16px_rgba(0,83,219,0.45)]" type="button">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+<span class="">Add to Network</span>
+</button>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- END: Main Page Content -->
+</div>
+<!-- END: Main View Wrapper -->
+
+
+</body></html>

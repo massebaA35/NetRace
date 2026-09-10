@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#122131", "on-tertiary-fixed-variant": "#004e5c", "on-surface-variant": "#c2c6d6", "on-secondary-fixed": "#00174b", "on-error": "#690005", "surface-container-high": "#1c2b3c", "surface-container-lowest": "#010f1f", "tertiary-fixed": "#acedff", "outline": "#8c909f", "surface-bright": "#2c3a4c", "on-tertiary": "#003640", "surface-tint": "#adc6ff", "on-tertiary-fixed": "#001f26", "on-surface": "#d4e4fa", "primary-container": "#4d8eff", "on-secondary": "#002a78", "on-secondary-fixed-variant": "#003ea8", "on-primary-fixed-variant": "#004395", "secondary-container": "#0053db", "error": "#ffb4ab", "inverse-on-surface": "#233143", "surface-container-highest": "#273647", "tertiary-container": "#009eb9", "on-tertiary-container": "#002f38", "outline-variant": "#424754", "inverse-surface": "#d4e4fa", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "secondary": "#b4c5ff", "primary-fixed-dim": "#adc6ff", "tertiary-fixed-dim": "#4cd7f6", "on-secondary-container": "#cdd7ff", "surface": "#051424", "secondary-fixed-dim": "#b4c5ff", "surface-variant": "#273647", "background": "#051424", "on-primary-fixed": "#001a42", "on-background": "#d4e4fa", "tertiary": "#4cd7f6", "on-primary": "#002e6a", "primary": "#adc6ff", "secondary-fixed": "#dbe1ff", "on-primary-container": "#00285d", "inverse-primary": "#005ac2", "on-error-container": "#ffdad6", "error-container": "#93000a", "primary-fixed": "#d8e2ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "3rem", "gutter-default": "1rem", "space-md": "1rem", "gutter-expanded": "1.5rem", "space-xl": "2rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "gutter-compact": "0.75rem", "space-xs": "0.5rem", "space-2xs": "0.25rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Geist" ], "body-lg": [ "Inter" ], "headline-sm": [ "Geist" ], "label-sm": [ "JetBrains Mono" ], "headline-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ] }, "fontSize": { "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "500" } ], "display-lg": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ], "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } };</script></head>
+<body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-[0_0_12px_rgba(77,142,255,0.25)]"><span class="material-symbols-outlined text-[24px]">radar</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">NetTrace AI</span><span class="font-label-sm text-label-sm text-tertiary tracking-wider font-semibold uppercase">TACTICAL CORE</span></div></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="home.html"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="upload-case" href="upload.html"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-body-md text-body-md flex-1">Upload Case</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="network-explorer" href="netexp.html"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md flex-1">Network Explorer</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="connection-finder" href=><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-body-md text-body-md flex-1">Connection Finder</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]" data-path="timeline" href="#"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md flex-1">Timeline</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="evidence" href="#"><span class="material-symbols-outlined text-[20px]">lock_clock</span><span class="font-body-md text-body-md flex-1">Evidence</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="geographic-map" href="#"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md flex-1">Geographic Map</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md flex-1">AI Assistant</span><span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary">ONLINE</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports" href="#"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md flex-1">Reports</span></a></nav></div><div class="px-space-xs flex flex-col gap-space-xs"><nav class="flex flex-col" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md flex-1">Settings</span></a></nav><div class="mx-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">SECNET V4.2 ENCRYPTED</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between gap-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex-1 max-w-xl"><div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search person, phone, vehicle, location or case..." type="text"/><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span class="font-semibold">⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_rgba(77,142,255,0.8)]"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm px-space-xs py-space-2xs rounded-lg bg-surface-container-low"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Agent Miller</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Investigator - Analyst</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-md"><div class="flex flex-col w-full">
+<!-- Top Tactical Intelligence Banner -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container p-space-lg mb-space-lg shadow-md">
+<div class="absolute -right-16 -top-16 w-80 h-80 rounded-full bg-primary/5 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 -bottom-20 w-64 h-64 rounded-full bg-tertiary/5 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-space-2xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-tertiary font-semibold uppercase tracking-wider bg-surface-container-high px-space-xs py-space-2xs rounded">CRITICAL TIMELINE SYNTHESIS</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">CASE #408 AUDIT CHAIN</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-semibold">Investigation Timeline</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Chronological reconstruction of forensic telemetry, communications, and field events.</p>
+</div>
+<div class="flex items-center gap-space-xs self-start md:self-auto">
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px] text-tertiary">tune</span>
+<span class="font-body-sm text-body-sm font-semibold">Density</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-on-surface transition-colors">
+<span class="material-symbols-outlined text-[18px] text-primary">download</span>
+<span class="font-body-sm text-body-sm font-semibold">Export Log</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px]">add</span>
+<span class="font-body-sm text-body-sm font-semibold">Add Incident</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Filter & Controls Bar -->
+<div class="bg-surface-container rounded-xl p-space-md mb-space-lg shadow-sm space-y-space-sm">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-sm">
+<!-- Case Filter -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Target Case Dossier</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-xs hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-primary text-[18px] mr-space-xs">folder_special</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate flex-1">Case #408 - Syndicate Wire</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+</div>
+<!-- Entity Filter -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Entity Filter</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-xs hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-secondary text-[18px] mr-space-xs">account_tree</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate flex-1">All Entities (David Chen, Elena...)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+</div>
+<!-- Date Range Filter -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Observation Period</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-xs hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-tertiary text-[18px] mr-space-xs">calendar_month</span>
+<span class="font-code-md text-code-md text-on-surface truncate flex-1">Aug 10, 2026 - Aug 15, 2026</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">calendar_today</span>
+</div>
+</div>
+<!-- Event Type Filter -->
+<div class="flex flex-col gap-space-2xs">
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Event Classification</label>
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-xs hover:bg-surface-container-high transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-tertiary-fixed text-[18px] mr-space-xs">filter_list</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate flex-1">All Types (Calls, Movement, Wires)</span>
+<span class="material-symbols-outlined text-on-surface-variant text-[16px]">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Search + Grouping Sub-bar -->
+<div class="pt-space-xs flex flex-col md:flex-row items-center justify-between gap-space-sm border-t border-surface-container-high/40">
+<div class="relative flex items-center bg-surface-container-low rounded-lg px-space-sm py-space-2xs w-full md:w-96">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">search</span>
+<input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search keywords, hashes, call IDs, coordinates..." type="text"/>
+<span class="font-label-sm text-label-sm px-space-2xs rounded bg-surface-container-high text-on-surface-variant">ESC</span>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-between md:justify-end">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Sort Order:</span>
+<span class="font-code-md text-label-sm text-tertiary bg-surface-container-low px-space-xs py-space-2xs rounded">DESC (Newest First)</span>
+</div>
+<div class="flex items-center bg-surface-container-low p-space-2xs rounded-lg">
+<button class="px-space-sm py-space-2xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all" id="btnGroupDay">By Day</button>
+<button class="px-space-sm py-space-2xs rounded font-label-sm text-label-sm bg-surface-container-highest text-primary font-semibold shadow-sm transition-all" id="btnGroupChrono">Chronological</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Primary Workspace Layout: Split View -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- Left Column: Chronological Flow (8 Columns) -->
+<div class="xl:col-span-8 flex flex-col gap-space-md">
+<!-- Day Header Sticky Indicator -->
+<div class="flex items-center gap-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-tertiary tracking-wider px-space-sm py-space-2xs bg-surface-container rounded-lg">SATURDAY, AUGUST 15, 2026</span>
+<div class="flex-1 h-px bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 Event Logged</span>
+</div>
+<!-- EVENT 1: Financial Transaction -->
+<div class="relative pl-8 md:pl-10">
+<!-- Vertical Line Segment -->
+<div class="absolute left-3.5 md:left-4 top-5 bottom-0 w-0.5 bg-surface-container-highest"></div>
+<!-- Icon Anchor Node -->
+<div class="absolute left-0 top-3 w-7 md:w-8 h-7 md:h-8 rounded-lg bg-error-container text-error flex items-center justify-center shadow-[0_0_12px_rgba(255,180,171,0.3)] z-10">
+<span class="material-symbols-outlined text-[18px]">currency_exchange</span>
+</div>
+<!-- Node Content Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-colors rounded-xl p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md text-primary font-semibold">14:12 EDT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">FINANCIAL ESCROW OUTFLOW</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-error-container text-error font-semibold flex items-center gap-space-2xs shadow-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              High Priority Financial Flag
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Wire Transfer to Crypto Escrow (USDT 450,000)</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Entities Involved</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface">
+<span class="font-semibold text-secondary">Apex Global Holdings LLC</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">arrow_forward</span>
+<span class="font-code-md text-label-sm text-tertiary bg-surface-container px-space-xs py-space-2xs rounded">Wallet: 0x9f...a81c</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Routing Location</span>
+<div class="flex items-center gap-space-2xs text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">public</span>
+<span>Offshore Clearing / Digital Asset Gateway</span>
+</div>
+</div>
+</div>
+<!-- Micro Visual: Swift Chain Path -->
+<div class="mb-space-sm bg-surface-container-lowest p-space-xs rounded-lg flex items-center justify-between overflow-x-auto text-on-surface-variant font-code-md text-label-sm">
+<div class="flex items-center gap-space-2xs text-primary">
+<span class="material-symbols-outlined text-[14px]">account_balance</span>
+<span>DB-CH-ZURICH</span>
+</div>
+<span class="material-symbols-outlined text-[12px] text-outline-variant">trending_flat</span>
+<div class="flex items-center gap-space-2xs text-on-surface">
+<span class="material-symbols-outlined text-[14px]">shuffle</span>
+<span>INTERMEDIARY_8802</span>
+</div>
+<span class="material-symbols-outlined text-[12px] text-outline-variant">trending_flat</span>
+<div class="flex items-center gap-space-2xs text-tertiary">
+<span class="material-symbols-outlined text-[14px]">toll</span>
+<span>TETHER_ESCROW_SMART_CONTRACT</span>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs border-t border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">description</span>
+<span class="font-code-md text-label-sm text-on-surface-variant">SWIFT_Audit_Trace_Log.xlsx (Row #4092)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">receipt_long</span>
+                Ledger Audit
+              </button>
+<button class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high hover:bg-surface-container-highest text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">flag</span>
+                Freeze Alert
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Day Header Indicator -->
+<div class="flex items-center gap-space-sm mt-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-tertiary tracking-wider px-space-sm py-space-2xs bg-surface-container rounded-lg">FRIDAY, AUGUST 14, 2026</span>
+<div class="flex-1 h-px bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 Event Logged</span>
+</div>
+<!-- EVENT 2: Vehicle Movement -->
+<div class="relative pl-8 md:pl-10">
+<!-- Vertical Line Segment -->
+<div class="absolute left-3.5 md:left-4 top-5 bottom-0 w-0.5 bg-surface-container-highest"></div>
+<!-- Icon Anchor Node -->
+<div class="absolute left-0 top-3 w-7 md:w-8 h-7 md:h-8 rounded-lg bg-surface-container-highest text-tertiary flex items-center justify-center shadow-[0_0_12px_rgba(76,215,246,0.25)] z-10">
+<span class="material-symbols-outlined text-[18px]">directions_car</span>
+</div>
+<!-- Node Content Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-colors rounded-xl p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md text-primary font-semibold">22:30 EDT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">SURVEILLANCE OPTICAL SENSOR</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary font-semibold flex items-center gap-space-2xs">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+              Geo Ping Verified
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Automated License Plate Recognition (ALPR) Hit</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Entities Involved</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface">
+<span class="font-code-md font-semibold text-secondary">Sedan [CA 8XYZ21]</span>
+<span class="text-on-surface-variant text-body-sm">(driven near Pier 14 Logistics Dock)</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Sensor Location</span>
+<div class="flex items-center gap-space-2xs text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-tertiary">location_on</span>
+<span>Pier 14 North Gate, Harbor Terminal</span>
+</div>
+</div>
+</div>
+<!-- Video Snapshot Placeholder Frame -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm mb-space-sm">
+<div class="sm:col-span-2 relative rounded-lg overflow-hidden bg-surface-container-lowest h-36">
+<img class="w-full h-full object-cover opacity-85" data-alt="Grainy surveillance camera footage capturing a dark sedan passing through a nighttime harbor terminal checkpoint gate with illuminated license plate capture overlay, subtle cyan timestamp watermark, tactical dark navy security feed visual." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCEEfjuf6chE9rpZX25KgCjxgJ7dHFmKSGhlNX44vxoxW33dqg4onRGSQc0NNdFgyozTQYLjvK0M_ao7FVTV2L-eciO2hfwNXdxUtJbmw7_9Sl8FG3BlpjVwfnbJklAhwRYQXdombvobH5c6FvmebmANFb8C-iI0lqQ7pZF2yCJUIzyQZ0oFe9hFJLfawvchs2mL273kFrjhuQhWU9scV6AnYjXnuEXZWS8XzlXoCMR1MlaCZrZeBbK"/>
+<div class="absolute bottom-2 left-2 px-space-xs py-space-2xs bg-surface/90 rounded text-label-sm font-code-md text-tertiary flex items-center gap-space-2xs backdrop-blur-sm">
+<span class="material-symbols-outlined text-[14px]">videocam</span>
+<span>CAM-09 // FRAME 1140</span>
+</div>
+<div class="absolute top-2 right-2 px-space-xs py-space-2xs bg-surface-container-low/80 rounded font-code-md text-label-sm text-on-surface">
+                CONFIDENCE: 98.4%
+              </div>
+</div>
+<!-- Mini Map Snippet -->
+<div class="relative rounded-lg overflow-hidden bg-surface-container-lowest h-36 flex flex-col justify-end p-space-xs" data-location="Pier 14 Logistics Dock, San Francisco, CA" style="">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent"></div>
+<div class="relative z-10 font-label-sm text-label-sm text-on-surface flex items-center justify-between">
+<span class="truncate">Harbor Sector 4</span>
+<span class="material-symbols-outlined text-[16px] text-primary">navigation</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs border-t border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">movie</span>
+<span class="font-code-md text-label-sm text-on-surface-variant">Port_Security_Camera_Feed_Cam09.mp4 (Frame 1140)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">play_circle</span>
+                Play Clip
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Day Header Indicator -->
+<div class="flex items-center gap-space-sm mt-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-tertiary tracking-wider px-space-sm py-space-2xs bg-surface-container rounded-lg">THURSDAY, AUGUST 13, 2026</span>
+<div class="flex-1 h-px bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 Event Logged</span>
+</div>
+<!-- EVENT 3: Phone Call / Intercept -->
+<div class="relative pl-8 md:pl-10">
+<!-- Vertical Line Segment -->
+<div class="absolute left-3.5 md:left-4 top-5 bottom-0 w-0.5 bg-surface-container-highest"></div>
+<!-- Icon Anchor Node -->
+<div class="absolute left-0 top-3 w-7 md:w-8 h-7 md:h-8 rounded-lg bg-secondary-container text-secondary flex items-center justify-center shadow-[0_0_12px_rgba(180,197,255,0.25)] z-10">
+<span class="material-symbols-outlined text-[18px]">phone_in_talk</span>
+</div>
+<!-- Node Content Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-colors rounded-xl p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md text-primary font-semibold">19:45 EDT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">VOIP INTERCEPT</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-secondary font-semibold">
+                Title III Intercept #084
+              </span>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-low text-on-surface-variant">
+                Duration: 4m 12s
+              </span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Inbound Encrypted Cellular Session</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Participants</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface">
+<span class="font-semibold text-primary">David Chen (Target #1)</span>
+<span class="material-symbols-outlined text-[14px] text-tertiary">sync_alt</span>
+<span class="font-semibold text-secondary">Elena Rostova</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Endpoint Telemetry</span>
+<div class="flex items-center gap-space-2xs text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">cell_tower</span>
+<span class="font-code-md text-label-sm">+1 (555) 349-0128 (Burner SIM IMEI 4928...)</span>
+</div>
+</div>
+</div>
+<!-- Interactive Audio Snippet Preview Player -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg mb-space-sm space-y-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<button class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center hover:bg-primary-container transition-all shadow-sm" id="audioPlayBtn">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">VOIP_ENCR_STREAM_084.wav</span>
+<span class="font-code-md text-label-sm text-on-surface-variant">01:24 / 04:12 • 256kbps AES-GCM</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container text-tertiary font-code-md">SPEAKER DIARIZED</span>
+</div>
+<!-- Fake Audio Waveform (Inline SVG) -->
+<div class="w-full h-8 flex items-center gap-1 px-1">
+<span class="h-2 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-4 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-6 w-1 bg-primary rounded-full"></span>
+<span class="h-7 w-1 bg-primary rounded-full"></span>
+<span class="h-4 w-1 bg-primary rounded-full"></span>
+<span class="h-8 w-1 bg-primary rounded-full"></span>
+<span class="h-5 w-1 bg-tertiary rounded-full"></span>
+<span class="h-3 w-1 bg-tertiary rounded-full"></span>
+<span class="h-6 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-7 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-3 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-5 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-8 w-1 bg-primary rounded-full"></span>
+<span class="h-6 w-1 bg-primary rounded-full"></span>
+<span class="h-4 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-3 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-7 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-5 w-1 bg-tertiary rounded-full"></span>
+<span class="h-2 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-4 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-6 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-8 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-5 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-3 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-4 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-6 w-1 bg-surface-container-high rounded-full"></span>
+<span class="h-2 w-1 bg-surface-container-high rounded-full"></span>
+</div>
+</div>
+<!-- Transcript Quote Pill -->
+<div class="mb-space-sm p-space-sm rounded-lg bg-surface-container-high/60 border-l-2 border-tertiary">
+<div class="flex items-center gap-space-2xs text-tertiary font-label-sm text-label-sm mb-space-2xs">
+<span class="material-symbols-outlined text-[14px]">format_quote</span>
+<span class="font-semibold">TRANSCRIPT EXCERPT (19:46:10)</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "Tell the dock manager the cargo won't be unsealed until Tuesday. Apex won't release the hash until the second tranche clears Zurich."
+            </p>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs border-t border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">description</span>
+<span class="font-code-md text-label-sm text-on-surface-variant">Wiretap_Transcript_Log_Case408.pdf (Page 18)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">translate</span>
+                View Full Transcript
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Day Header Indicator -->
+<div class="flex items-center gap-space-sm mt-space-sm">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-tertiary tracking-wider px-space-sm py-space-2xs bg-surface-container rounded-lg">TUESDAY, AUGUST 11, 2026</span>
+<div class="flex-1 h-px bg-surface-container-high"></div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">1 Event Logged</span>
+</div>
+<!-- EVENT 4: Case Event -->
+<div class="relative pl-8 md:pl-10">
+<!-- Terminal Anchor Node (No lower line) -->
+<div class="absolute left-0 top-3 w-7 md:w-8 h-7 md:h-8 rounded-lg bg-surface-container-highest text-primary flex items-center justify-center shadow-[0_0_12px_rgba(77,142,255,0.25)] z-10">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<!-- Node Content Card -->
+<div class="bg-surface-container hover:bg-surface-container-high transition-colors rounded-xl p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="font-code-md text-code-md text-primary font-semibold">09:15 EDT</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">/</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-semibold">JUDICIAL AUTHORIZATION</span>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-semibold">
+              ORIGIN RECORD
+            </span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface font-semibold mb-space-xs">Formal Case Opening &amp; Surveillance Authorization</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm mb-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Entities Involved</span>
+<div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface">
+<span class="font-semibold text-primary">Special Agent Miller</span>
+<span class="text-on-surface-variant text-label-sm">&amp;</span>
+<span class="font-semibold text-secondary">Supervisor Hayes</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Operating Unit</span>
+<div class="flex items-center gap-space-2xs text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">apartment</span>
+<span>Federal Field Operations Division</span>
+</div>
+</div>
+</div>
+<div class="flex flex-wrap items-center justify-between gap-space-xs pt-space-xs border-t border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant">gavel</span>
+<span class="font-code-md text-label-sm text-on-surface-variant">Court_Order_TitleIII_Warrant.pdf (Doc #WO-408-A)</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high hover:bg-surface-container-highest text-primary transition-colors flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">visibility</span>
+                Inspect Warrant
+              </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Timeline Insights & Telemetry Radar (4 Columns) -->
+<div class="xl:col-span-4 flex flex-col gap-space-md">
+<!-- Primary Dossier Card: Target Snapshot -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-semibold uppercase text-tertiary tracking-wider">PRIMARY TARGET CORRELATION</span>
+<span class="material-symbols-outlined text-primary text-[20px]">fingerprint</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="relative w-16 h-16 rounded-lg overflow-hidden bg-surface-container-lowest shrink-0">
+<img class="w-full h-full object-cover" data-alt="High-resolution law enforcement identity dossier portrait of a male suspect in his mid-30s with neutral expression, moody cold cinematic directional lighting against a dark navy surveillance backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDi8rCfa73072b-nC7sS_10GeX2ke2Ar0zrE7n5IPSo_WP_RBl6_PE8z1JXFXM4XUBUYA-3oM_FkB7rZew1yc2RnZnJ1uWjJi2lRbA1BJyFQ4SrgB0aiJHVfKA-Qwrv0QnSLqTNTuZrU1k26q7W9msJcE02IgFid-261RG6lRnUjJTuyx3kQ9KpRKec5Xwgsxyb58V7FkCCV2K0ch4xmrUhtDEuyiuDa9NY4m8C6a-fytlfZoyPMuGz"/>
+<span class="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-error ring-2 ring-surface-container"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface truncate">David Chen</span>
+<span class="font-label-sm text-label-sm text-secondary font-code-md">UID: TGT-408-ALPHA</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Apex Global Holdings Director</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-xs rounded-lg text-center font-code-md">
+<div class="bg-surface-container p-space-xs rounded">
+<div class="text-label-sm text-on-surface-variant uppercase">Threat Score</div>
+<div class="text-headline-sm font-semibold text-error">89 / 100</div>
+</div>
+<div class="bg-surface-container p-space-xs rounded">
+<div class="text-label-sm text-on-surface-variant uppercase">Pings Matched</div>
+<div class="text-headline-sm font-semibold text-tertiary">13 Feeds</div>
+</div>
+</div>
+</div>
+<!-- Timeline Insights Card -->
+<div class="bg-surface-container rounded-xl p-space-md shadow-md space-y-space-md">
+<div class="flex items-center justify-between border-b border-surface-container-high pb-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-tertiary text-[20px]">query_stats</span>
+<h2 class="font-headline-sm text-headline-sm font-semibold text-on-surface">Timeline Insights</h2>
+</div>
+<span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-high text-primary font-code-md">SYNTH-LIVE</span>
+</div>
+<!-- Anomaly Alert Card -->
+<div class="p-space-sm rounded-lg bg-surface-container-low border-l-4 border-error space-y-space-2xs">
+<div class="flex items-center gap-space-xs text-error font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[16px]">warning</span>
+<span>ACTIVE ANOMALY DETECTED</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface">
+<span class="font-semibold text-primary">3x increase</span> in nocturnal vehicular movements correlated with outbound crypto smart contract triggers between 22:00 and 03:00 EDT.
+          </p>
+</div>
+<!-- Event Distribution Donut/Bar Visual -->
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between text-body-sm">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Event Distribution</span>
+<span class="font-code-md text-label-sm text-on-surface font-semibold">13 Total Recorded</span>
+</div>
+<!-- Segmented Progress Bar -->
+<div class="w-full h-3 bg-surface-container-lowest rounded-full overflow-hidden flex">
+<!-- 6 Phone Calls = ~46% -->
+<div class="h-full bg-secondary hover:brightness-125 transition-all" style="width: 46%" title="Phone Calls: 6"></div>
+<!-- 4 Movement Pings = ~31% -->
+<div class="h-full bg-tertiary hover:brightness-125 transition-all" style="width: 31%" title="Movement Pings: 4"></div>
+<!-- 2 Wire Transfers = ~15% -->
+<div class="h-full bg-error hover:brightness-125 transition-all" style="width: 15%" title="Wire Transfers: 2"></div>
+<!-- 1 Case Event = ~8% -->
+<div class="h-full bg-primary hover:brightness-125 transition-all" style="width: 8%" title="Case Event: 1"></div>
+</div>
+<!-- Legend Grid -->
+<div class="grid grid-cols-2 gap-space-xs pt-space-xs font-body-sm text-body-sm">
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span>
+<span class="text-on-surface-variant">Phone Calls</span>
+</div>
+<span class="font-code-md font-semibold text-on-surface">6</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-tertiary"></span>
+<span class="text-on-surface-variant">Movement</span>
+</div>
+<span class="font-code-md font-semibold text-on-surface">4</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-error"></span>
+<span class="text-on-surface-variant">Wire Transfers</span>
+</div>
+<span class="font-code-md font-semibold text-on-surface">2</span>
+</div>
+<div class="flex items-center justify-between p-space-xs rounded bg-surface-container-low">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded-sm bg-primary"></span>
+<span class="text-on-surface-variant">Case Events</span>
+</div>
+<span class="font-code-md font-semibold text-on-surface">1</span>
+</div>
+</div>
+</div>
+<!-- Telemetry Density Chart (SVG Sparkline) -->
+<div class="space-y-space-2xs pt-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Incident Density by Hour</span>
+<span class="font-code-md text-label-sm text-tertiary">Peak: 22:00 EDT</span>
+</div>
+<div class="bg-surface-container-lowest p-space-sm rounded-lg">
+<svg class="w-full h-16 overflow-visible" preserveaspectratio="none" viewbox="0 0 240 60">
+<!-- Gridlines -->
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="240" y1="15" y2="15"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-dasharray="2,2" stroke-width="1" x1="0" x2="240" y1="35" y2="35"></line>
+<line class="text-surface-container-high" stroke="currentColor" stroke-width="1" x1="0" x2="240" y1="55" y2="55"></line>
+<!-- Area Fill Gradient -->
+<defs>
+<lineargradient id="sparklineGrad" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#4cd7f6" stop-opacity="0.3"></stop>
+<stop offset="100%" stop-color="#4cd7f6" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+<!-- Path Area -->
+<path d="M 0,55 L 20,50 L 40,52 L 60,30 L 80,45 L 100,20 L 120,35 L 140,40 L 160,25 L 180,10 L 200,15 L 220,40 L 240,55 Z" fill="url(#sparklineGrad)"></path>
+<!-- Trend Line -->
+<path d="M 0,55 L 20,50 L 40,52 L 60,30 L 80,45 L 100,20 L 120,35 L 140,40 L 160,25 L 180,10 L 200,15 L 220,40 L 240,55" fill="none" stroke="#4cd7f6" stroke-linecap="round" stroke-width="2"></path>
+<!-- Peak Marker Dot -->
+<circle class="fill-primary stroke-background" cx="180" cy="10" r="3.5" stroke-width="2"></circle>
+</svg>
+<div class="flex justify-between font-code-md text-label-sm text-on-surface-variant pt-space-2xs">
+<span>00:00</span>
+<span>06:00</span>
+<span>12:00</span>
+<span>18:00</span>
+<span>23:59</span>
+</div>
+</div>
+</div>
+<!-- Quick Filter Fast Jump -->
+<div class="pt-space-xs space-y-space-xs">
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant font-semibold">Jump to Milestone</span>
+<div class="flex flex-col gap-space-2xs">
+<button class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface truncate">USDT 450k Escrow Sweep</span>
+<span class="font-code-md text-label-sm text-error">Aug 15</span>
+</button>
+<button class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface truncate">Pier 14 Gate ALPR Trigger</span>
+<span class="font-code-md text-label-sm text-tertiary">Aug 14</span>
+</button>
+<button class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface truncate">Title III Intercept 084</span>
+<span class="font-code-md text-label-sm text-secondary">Aug 13</span>
+</button>
+<button class="flex items-center justify-between px-space-sm py-space-xs bg-surface-container-low hover:bg-surface-container-high rounded-lg text-left transition-colors">
+<span class="font-body-sm text-body-sm text-on-surface truncate">Warrant Authorization</span>
+<span class="font-code-md text-label-sm text-primary">Aug 11</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Chain of Custody Security Badge -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex items-center gap-space-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[28px] text-tertiary">verified</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-body-sm font-semibold text-on-surface">Forensic Chain Verified</span>
+<span class="font-code-md text-label-sm">SHA-256: 8a4f9...de19b2 • Immutably Logged</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Client-side Script -->
+<script>
+    (function() {
+      // Toggle Grouping active styles
+      const btnDay = document.getElementById('btnGroupDay');
+      const btnChrono = document.getElementById('btnGroupChrono');
+
+      if (btnDay && btnChrono) {
+        btnDay.addEventListener('click', function() {
+          btnDay.className = 'px-space-sm py-space-2xs rounded font-label-sm text-label-sm bg-surface-container-highest text-primary font-semibold shadow-sm transition-all';
+          btnChrono.className = 'px-space-sm py-space-2xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+        });
+
+        btnChrono.addEventListener('click', function() {
+          btnChrono.className = 'px-space-sm py-space-2xs rounded font-label-sm text-label-sm bg-surface-container-highest text-primary font-semibold shadow-sm transition-all';
+          btnDay.className = 'px-space-sm py-space-2xs rounded font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface transition-all';
+        });
+      }
+
+      // Audio Play Button Toggle
+      const audioBtn = document.getElementById('audioPlayBtn');
+      if (audioBtn) {
+        let isPlaying = false;
+        audioBtn.addEventListener('click', function() {
+          isPlaying = !isPlaying;
+          const icon = audioBtn.querySelector('.material-symbols-outlined');
+          if (icon) {
+            icon.textContent = isPlaying ? 'pause' : 'play_arrow';
+          }
+          audioBtn.classList.toggle('bg-tertiary', isPlaying);
+          audioBtn.classList.toggle('text-on-tertiary', isPlaying);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

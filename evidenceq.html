@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "surface-container": "#122131", "on-tertiary-fixed-variant": "#004e5c", "on-surface-variant": "#c2c6d6", "on-secondary-fixed": "#00174b", "on-error": "#690005", "surface-container-high": "#1c2b3c", "surface-container-lowest": "#010f1f", "tertiary-fixed": "#acedff", "outline": "#8c909f", "surface-bright": "#2c3a4c", "on-tertiary": "#003640", "surface-tint": "#adc6ff", "on-tertiary-fixed": "#001f26", "on-surface": "#d4e4fa", "primary-container": "#4d8eff", "on-secondary": "#002a78", "on-secondary-fixed-variant": "#003ea8", "on-primary-fixed-variant": "#004395", "secondary-container": "#0053db", "error": "#ffb4ab", "inverse-on-surface": "#233143", "surface-container-highest": "#273647", "tertiary-container": "#009eb9", "on-tertiary-container": "#002f38", "outline-variant": "#424754", "inverse-surface": "#d4e4fa", "surface-container-low": "#0d1c2d", "surface-dim": "#051424", "secondary": "#b4c5ff", "primary-fixed-dim": "#adc6ff", "tertiary-fixed-dim": "#4cd7f6", "on-secondary-container": "#cdd7ff", "surface": "#051424", "secondary-fixed-dim": "#b4c5ff", "surface-variant": "#273647", "background": "#051424", "on-primary-fixed": "#001a42", "on-background": "#d4e4fa", "tertiary": "#4cd7f6", "on-primary": "#002e6a", "primary": "#adc6ff", "secondary-fixed": "#dbe1ff", "on-primary-container": "#00285d", "inverse-primary": "#005ac2", "on-error-container": "#ffdad6", "error-container": "#93000a", "primary-fixed": "#d8e2ff" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-2xl": "3rem", "gutter-default": "1rem", "space-md": "1rem", "gutter-expanded": "1.5rem", "space-xl": "2rem", "space-sm": "0.75rem", "space-lg": "1.5rem", "gutter-compact": "0.75rem", "space-xs": "0.5rem", "space-2xs": "0.25rem" }, "fontFamily": { "body-md": [ "Inter" ], "headline-lg": [ "Geist" ], "label-md": [ "JetBrains Mono" ], "display-lg": [ "Geist" ], "body-lg": [ "Inter" ], "headline-sm": [ "Geist" ], "label-sm": [ "JetBrains Mono" ], "headline-md": [ "Geist" ], "headline-lg-mobile": [ "Geist" ], "code-md": [ "JetBrains Mono" ], "body-sm": [ "Inter" ] }, "fontSize": { "body-md": [ "0.875rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "headline-lg": [ "1.75rem", { "lineHeight": "2.25rem", "letterSpacing": "-0.02em", "fontWeight": "600" } ], "label-md": [ "0.75rem", { "lineHeight": "1rem", "letterSpacing": "0.05em", "fontWeight": "500" } ], "display-lg": [ "2.25rem", { "lineHeight": "2.75rem", "letterSpacing": "-0.025em", "fontWeight": "600" } ], "body-lg": [ "1rem", { "lineHeight": "1.5rem", "fontWeight": "400" } ], "headline-sm": [ "1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "-0.01em", "fontWeight": "500" } ], "label-sm": [ "0.6875rem", { "lineHeight": "0.875rem", "letterSpacing": "0.06em", "fontWeight": "500" } ], "headline-md": [ "1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "headline-lg-mobile": [ "1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.015em", "fontWeight": "600" } ], "code-md": [ "0.8125rem", { "lineHeight": "1.25rem", "fontWeight": "400" } ], "body-sm": [ "0.75rem", { "lineHeight": "1rem", "fontWeight": "400" } ] } } } };</script></head>
+<body class="bg-background font-body-md text-body-md text-on-surface"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-low z-50 flex flex-col justify-between py-space-md"><div class="flex flex-col gap-space-md"><div class="px-space-md flex items-center gap-space-sm"><div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary shadow-[0_0_12px_rgba(77,142,255,0.25)]"><span class="material-symbols-outlined text-[24px]">radar</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight font-semibold">NetTrace AI</span><span class="font-label-sm text-label-sm text-tertiary tracking-wider font-semibold uppercase">TACTICAL CORE</span></div></div><nav class="flex flex-col gap-space-2xs px-space-xs" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="dashboard" href="home.html"><span class="material-symbols-outlined text-[20px]">space_dashboard</span><span class="font-body-md text-body-md flex-1">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="upload-case" href="upload.html"><span class="material-symbols-outlined text-[20px]">drive_folder_upload</span><span class="font-body-md text-body-md flex-1">Upload Case</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="network-explorer" href="netexp.html"><span class="material-symbols-outlined text-[20px]">hub</span><span class="font-body-md text-body-md flex-1">Network Explorer</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="connection-finder" href="confind.html"><span class="material-symbols-outlined text-[20px]">alt_route</span><span class="font-body-md text-body-md flex-1">Connection Finder</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="timeline" href="timeline.html"><span class="material-symbols-outlined text-[20px]">history_toggle_off</span><span class="font-body-md text-body-md flex-1">Timeline</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]" data-path="evidence" href="evidenceq.html"><span class="material-symbols-outlined text-[20px]">lock_clock</span><span class="font-body-md text-body-md flex-1">Evidence</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="geographic-map" href="map.html"><span class="material-symbols-outlined text-[20px]">map</span><span class="font-body-md text-body-md flex-1">Geographic Map</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-assistant" href="#"><span class="material-symbols-outlined text-[20px]">smart_toy</span><span class="font-body-md text-body-md flex-1">AI Assistant</span><span class="font-label-sm text-label-sm px-space-xs py-space-2xs rounded bg-surface-container-highest text-tertiary">ONLINE</span></a><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="reports" href="report.html"><span class="material-symbols-outlined text-[20px]">summarize</span><span class="font-body-md text-body-md flex-1">Reports</span></a></nav></div><div class="px-space-xs flex flex-col gap-space-xs"><nav class="flex flex-col" data-active-classes="bg-surface-container-highest text-primary font-semibold shadow-[0_0_8px_rgba(77,142,255,0.2)]"><a class="flex items-center gap-space-sm px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-body-md text-body-md flex-1">Settings</span></a></nav><div class="mx-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface font-semibold tracking-wider">SECNET V4.2 ENCRYPTED</span></div><span class="material-symbols-outlined text-[16px] text-tertiary">shield_lock</span></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 px-space-lg flex items-center justify-between gap-space-md shadow-[0_1px_8px_rgba(0,0,0,0.25)]"><div class="flex-1 max-w-xl"><div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs"><span class="material-symbols-outlined text-on-surface-variant text-[20px] mr-space-xs">search</span><input class="w-full bg-transparent border-none outline-none font-body-md text-body-md text-on-surface placeholder:text-on-surface-variant/60" placeholder="Search person, phone, vehicle, location or case..." type="text"/><div class="flex items-center gap-space-2xs px-space-xs py-space-2xs rounded bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm"><span class="font-semibold">⌘</span><span>K</span></div></div></div><div class="flex items-center gap-space-md"><button class="relative p-space-xs rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 w-2 h-2 rounded-full bg-primary-container shadow-[0_0_6px_rgba(77,142,255,0.8)]"></span></button><div class="h-8 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm px-space-xs py-space-2xs rounded-lg bg-surface-container-low"><div class="relative flex items-center justify-center"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><span class="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-tertiary ring-2 ring-surface-container-low"></span></div><div class="flex flex-col text-left"><span class="font-headline-sm text-body-sm font-semibold text-on-surface leading-tight">Agent Miller</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-tight">Investigator - Analyst</span></div></div></div></header><main class="w-full pt-16 bg-surface px-space-lg py-space-md"><div class="flex flex-col w-full gap-space-lg pb-space-2xl">
+<!-- Header / Breadcrumb / Metrics Bar -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-2xs">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-tertiary">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>EVIDENTIARY ARCHIVE // CASE-408-ALPHA</span>
+<span class="text-outline-variant">•</span>
+<span class="text-on-surface-variant font-mono">CHAIN-OF-CUSTODY AUDIT ACTIVE</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-semibold tracking-tight">Evidence &amp; Sources</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl">
+        Forensic evidentiary repository, chain-of-custody tracking, and verified ingestion artifacts.
+      </p>
+</div>
+<!-- Quick Integrity Metric Badge Array -->
+<div class="flex items-center gap-space-sm bg-surface-container-low p-space-xs rounded-xl shadow-sm">
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container rounded-lg">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface font-semibold">24 ARTIFACTS</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm text-on-surface">22 VERIFIED</span>
+</div>
+<div class="flex items-center gap-space-xs px-space-sm py-space-2xs bg-surface-container rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[16px]">fingerprint</span>
+<span class="font-label-sm text-label-sm text-on-surface font-mono">100% SHA-256</span>
+</div>
+</div>
+</div>
+<!-- Top Control Bar: Search, Filters, and Primary Ingestion Actions -->
+<div class="flex flex-col xl:flex-row items-stretch xl:items-center justify-between gap-space-md bg-surface-container-low p-space-sm rounded-xl shadow-sm">
+<!-- Search Bar & Filter Pills -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center gap-space-sm flex-1">
+<div class="relative flex-1 max-w-lg">
+<div class="relative flex items-center bg-surface-container rounded-lg px-space-sm py-space-xs shadow-inner">
+<span class="material-symbols-outlined text-on-surface-variant text-[18px] mr-space-xs">search</span>
+<input class="w-full bg-transparent border-none outline-none font-body-sm text-body-sm text-on-surface placeholder:text-on-surface-variant/50 focus:placeholder-transparent" id="evidenceSearch" placeholder="Search evidence title, SHA-256 hash, entity, or source..." type="text"/>
+<kbd class="hidden sm:inline-block font-label-sm text-label-sm text-outline px-space-2xs py-0.5 rounded bg-surface-container-high">ESC</kbd>
+</div>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-space-2xs overflow-x-auto py-0.5" id="filterContainer">
+<button class="filter-pill active px-space-sm py-space-2xs rounded-lg font-label-sm text-label-sm font-semibold transition-colors bg-primary-container text-on-primary shadow-sm" data-filter="all">
+          All (24)
+        </button>
+<button class="filter-pill px-space-sm py-space-2xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container bg-surface-container/40 transition-colors" data-filter="fir">
+          FIR (4)
+        </button>
+<button class="filter-pill px-space-sm py-space-2xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container bg-surface-container/40 transition-colors" data-filter="cdr">
+          CDR (7)
+        </button>
+<button class="filter-pill px-space-sm py-space-2xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container bg-surface-container/40 transition-colors" data-filter="financial">
+          Financial Record (5)
+        </button>
+<button class="filter-pill px-space-sm py-space-2xs rounded-lg font-label-sm text-label-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container bg-surface-container/40 transition-colors" data-filter="other">
+          Other (8)
+        </button>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-xs shrink-0 self-end xl:self-auto">
+<button class="flex items-center gap-space-xs px-space-sm py-space-xs rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium transition-colors shadow-sm">
+<span class="material-symbols-outlined text-[18px] text-tertiary">download</span>
+<span>Export Ledger (CSV)</span>
+</button>
+<button class="flex items-center gap-space-xs px-space-md py-space-xs rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary font-body-sm text-body-sm font-semibold transition-all shadow-md hover:shadow-lg hover:shadow-primary/20">
+<span class="material-symbols-outlined text-[18px]">add_moderator</span>
+<span>+ Ingest New Evidence</span>
+</button>
+</div>
+</div>
+<!-- 2-Column Split Workspace: Table & Detailed Inspector -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / CENTER: Data Table (8 of 12 cols on desktop) -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col bg-surface-container-low rounded-xl overflow-hidden shadow-sm">
+<!-- Table Functional Bar -->
+<div class="px-space-md py-space-sm bg-surface-container flex items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs text-on-surface font-headline-sm text-body-md font-semibold">
+<span class="material-symbols-outlined text-[18px] text-primary">inventory_2</span>
+<span>Verified Master Ledger</span>
+<span class="font-label-sm text-label-sm text-outline-variant ml-space-xs">BATCH #2026-Q3</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Displaying 6 of 24 records</span>
+<button class="p-space-2xs text-on-surface-variant hover:text-on-surface rounded hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px]">tune</span>
+</button>
+</div>
+</div>
+<!-- Scrollable Data Table Container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse" id="evidenceTable">
+<thead>
+<tr class="bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider select-none">
+<th class="py-space-sm px-space-md font-medium">Evidence ID</th>
+<th class="py-space-sm px-space-sm font-medium">Type</th>
+<th class="py-space-sm px-space-sm font-medium">Source Document</th>
+<th class="py-space-sm px-space-sm font-medium">Related Entity</th>
+<th class="py-space-sm px-space-sm font-medium">Page/Record</th>
+<th class="py-space-sm px-space-sm font-medium">Verification Status</th>
+<th class="py-space-sm px-space-md text-right font-medium">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y-0 font-body-sm text-body-sm text-on-surface">
+<!-- Row 1 (Active by default) -->
+<tr class="evidence-row cursor-pointer transition-all bg-surface-container-high/80 hover:bg-surface-container-highest group" data-classification="Lawful Intercept / FISA Section 702" data-custody="Ingested by Agent Miller on Aug 14, 2026 at 18:22 EDT" data-doc="Wiretap_Transcript_Log_Case408.pdf" data-doc-size="14.2 MB" data-entity="David Chen (Target #1) &amp; Elena Rostova" data-hash="SHA-256: 8f2c38da98104ea2f10b00918c5e63412abef090d8194468f742c388279849a1" data-id="EVD-408-01" data-record="Page 18, Audio Line 22" data-rel="Direct telephonic coordination before offshore wire release" data-status="Verified" data-status-type="green" data-type="CDR">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-6 rounded-full bg-primary inline-block mr-space-2xs"></span>
+<span class="font-mono font-semibold text-primary">EVD-408-01</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-space-2xs rounded font-label-sm text-label-sm bg-surface-container text-tertiary font-mono">CDR</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs font-mono text-body-sm text-on-surface truncate max-w-[180px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">description</span>
+<span class="truncate">Wiretap_Transcript_Log_Case408.pdf</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="text-on-surface font-medium truncate max-w-[150px] inline-block">David Chen, Elena Rostova</span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-on-surface-variant">
+                Page 18
+              </td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Verified
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="p-space-2xs rounded text-primary hover:bg-primary/20 transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="evidence-row cursor-pointer transition-all hover:bg-surface-container-high/60 group bg-surface-container-low" data-classification="FinCEN / Subpoena Bank Secrecy Act" data-custody="Subpoena Return processed by Agent Chen on Aug 12, 2026 at 11:04 EDT" data-doc="SWIFT_Audit_Trace_Log.xlsx" data-doc-size="8.4 MB" data-entity="Apex Global Holdings LLC" data-hash="SHA-256: 4b6e22f778a01cd49e88b3921af7b8c20173e86c06fa02b5443a0e4179bcde42" data-id="EVD-408-02" data-record="Row #4092, Routing Batch 09B" data-rel="Unregistered intermediary shell entity routing $2.4M through Zurich" data-status="Verified" data-status-type="green" data-type="Financial Record">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-6 rounded-full bg-transparent inline-block mr-space-2xs"></span>
+<span class="font-mono font-semibold text-on-surface group-hover:text-primary transition-colors">EVD-408-02</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-space-2xs rounded font-label-sm text-label-sm bg-surface-container text-secondary font-mono">Financial</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs font-mono text-body-sm text-on-surface truncate max-w-[180px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">table_chart</span>
+<span class="truncate">SWIFT_Audit_Trace_Log.xlsx</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="text-on-surface font-medium truncate max-w-[150px] inline-block">Apex Global Holdings LLC</span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-on-surface-variant">
+                Row #4092
+              </td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Verified
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="p-space-2xs rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="evidence-row cursor-pointer transition-all hover:bg-surface-container-high/60 group bg-surface-container/20" data-classification="Physical Forensics / Harbor Police Intercept" data-custody="Physical drive secured by Tactical Unit Bravo on Aug 10, 2026 at 23:45 EDT" data-doc="Pier14_CCTV_Surveillance_Log.docx" data-doc-size="42.1 MB" data-entity="Sedan [CA 8XYZ21]" data-hash="SHA-256: e9c1340b6e927f8a371190bcda43ef1027dcb34892c55172aa48472506eef132" data-id="EVD-408-03" data-record="Timecode 22:14:08 UTC" data-rel="Vehicle linked to co-conspirator drop point at industrial dock gate" data-status="Verified" data-status-type="green" data-type="ALPR / Surveillance">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-6 rounded-full bg-transparent inline-block mr-space-2xs"></span>
+<span class="font-mono font-semibold text-on-surface group-hover:text-primary transition-colors">EVD-408-03</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-space-2xs rounded font-label-sm text-label-sm bg-surface-container text-tertiary-fixed-dim font-mono">ALPR/CCTV</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs font-mono text-body-sm text-on-surface truncate max-w-[180px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">videocam</span>
+<span class="truncate">Pier14_CCTV_Surveillance_Log.docx</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="text-on-surface font-medium truncate max-w-[150px] inline-block font-mono">Sedan [CA 8XYZ21]</span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-on-surface-variant">
+                Timecode 22:14
+              </td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Verified
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="p-space-2xs rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="evidence-row cursor-pointer transition-all hover:bg-surface-container-high/60 group bg-surface-container-low" data-classification="Judicial Warrant / Seal Level Alpha" data-custody="Entered into judicial ledger by Clerk Henderson on Jul 29, 2026 at 09:00 EDT" data-doc="Court_Order_TitleIII_Warrant.pdf" data-doc-size="2.1 MB" data-entity="Case #408 Docket" data-hash="SHA-256: 37af90d21e84ca0914c63288fb93e271a5c68994770198de354117b018cfde01" data-id="EVD-408-04" data-record="Doc #WO-408, Docket Item 14" data-rel="Judicial authorization for telecommunication interception &amp; telemetry ingestion" data-status="Verified" data-status-type="green" data-type="FIR / Court Order">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-6 rounded-full bg-transparent inline-block mr-space-2xs"></span>
+<span class="font-mono font-semibold text-on-surface group-hover:text-primary transition-colors">EVD-408-04</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-space-2xs rounded font-label-sm text-label-sm bg-surface-container text-primary font-mono">FIR/Warrant</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs font-mono text-body-sm text-on-surface truncate max-w-[180px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">gavel</span>
+<span class="truncate">Court_Order_TitleIII_Warrant.pdf</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="text-on-surface font-medium truncate max-w-[150px] inline-block">Case #408 Docket</span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-on-surface-variant">
+                Doc #WO-408
+              </td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+                  Verified
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="p-space-2xs rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="evidence-row cursor-pointer transition-all hover:bg-surface-container-high/60 group bg-surface-container/20" data-classification="Telephony Telemetry / Pending Verification" data-custody="Uploaded via Carrier Secure API by Analyst Kowalski on Aug 15, 2026 at 04:18 EDT" data-doc="Carrier_Subpoena_Records_Aug2026.csv" data-doc-size="19.8 MB" data-entity="+1 (555) 349-0128" data-hash="SHA-256: fa4891b29ce4590119842a7819ceab4001dce9902341857648392019ab9211ec" data-id="EVD-408-05" data-record="Line 8821 (Cell Tower #88-C)" data-rel="Burner IMSI connection detected near encrypted relay switchboard" data-status="Pending Review" data-status-type="amber" data-type="CDR">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-6 rounded-full bg-transparent inline-block mr-space-2xs"></span>
+<span class="font-mono font-semibold text-on-surface group-hover:text-primary transition-colors">EVD-408-05</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-space-2xs rounded font-label-sm text-label-sm bg-surface-container text-tertiary font-mono">CDR</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs font-mono text-body-sm text-on-surface truncate max-w-[180px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">perm_phone_msg</span>
+<span class="truncate">Carrier_Subpoena_Records_Aug2026.csv</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="text-on-surface font-medium truncate max-w-[150px] inline-block font-mono">+1 (555) 349-0128</span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-on-surface-variant">
+                Line 8821
+              </td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-secondary-container/40 text-secondary font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Pending Review
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="p-space-2xs rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+<!-- Row 6 -->
+<tr class="evidence-row cursor-pointer transition-all hover:bg-surface-container-high/60 group bg-surface-container-low" data-classification="Raw Hydro-Acoustic Signal / Decryption Pending" data-custody="Field acoustic pod extraction by Special Agent Davis on Aug 15, 2026 at 06:30 EDT" data-doc="Harbor_Surveillance_Audio.raw" data-doc-size="98.7 MB" data-entity="Target #1 Intercept" data-hash="SHA-256: 18b760a9f5d134882e301cdfe99104fa2839910e58c38210398401aa9248bde9" data-id="EVD-408-06" data-record="Offset 04:12 - 08:35" data-rel="Encrypted payload captured via directional hydrophone / dock perimeter" data-status="Unverified" data-status-type="gray" data-type="Other (Encrypted Media)">
+<td class="py-space-sm px-space-md">
+<div class="flex items-center gap-space-2xs">
+<span class="w-1.5 h-6 rounded-full bg-transparent inline-block mr-space-2xs"></span>
+<span class="font-mono font-semibold text-on-surface group-hover:text-primary transition-colors">EVD-408-06</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="px-space-xs py-space-2xs rounded font-label-sm text-label-sm bg-surface-container text-on-surface-variant font-mono">Encrypted</span>
+</td>
+<td class="py-space-sm px-space-sm">
+<div class="flex items-center gap-space-xs font-mono text-body-sm text-on-surface truncate max-w-[180px]">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant shrink-0">audio_file</span>
+<span class="truncate">Harbor_Surveillance_Audio.raw</span>
+</div>
+</td>
+<td class="py-space-sm px-space-sm">
+<span class="text-on-surface font-medium truncate max-w-[150px] inline-block">Target #1 Intercept</span>
+</td>
+<td class="py-space-sm px-space-sm font-mono text-on-surface-variant">
+                Offset 04:12
+              </td>
+<td class="py-space-sm px-space-sm">
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                  Unverified
+                </span>
+</td>
+<td class="py-space-sm px-space-md text-right">
+<button class="p-space-2xs rounded text-on-surface-variant hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination & Integrity Verification Footer -->
+<div class="px-space-md py-space-sm bg-surface-container-low flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-[16px] text-tertiary">lock</span>
+<span>Ledger Checksum: <span class="font-mono text-on-surface">5b88...ce19</span></span>
+</div>
+<div class="flex items-center gap-space-xs">
+<button class="p-space-2xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors disabled:opacity-40" disabled="">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<span class="font-label-sm text-label-sm text-on-surface px-space-xs">Page 1 of 4</span>
+<button class="p-space-2xs rounded bg-surface-container hover:bg-surface-container-high text-on-surface hover:text-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT: Selected Item Details Panel (5 of 12 cols on desktop) -->
+<div class="lg:col-span-5 xl:col-span-4 flex flex-col gap-space-md">
+<!-- Dossier Primary Container -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-md shadow-sm relative overflow-hidden">
+<!-- Glowing ambient backdrop token -->
+<div class="absolute -top-16 -right-16 w-36 h-36 rounded-full bg-primary/10 blur-3xl pointer-events-none"></div>
+<!-- Dossier Header -->
+<div class="flex items-start justify-between gap-space-sm pb-space-sm bg-surface-container-low">
+<div class="flex flex-col gap-space-2xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-primary font-semibold">Active Inspector</span>
+<div class="flex items-center gap-space-xs">
+<h2 class="font-headline-md text-headline-md text-on-surface font-semibold tracking-tight" id="dossierTitle">Evidence Dossier: EVD-408-01</h2>
+</div>
+<div class="font-label-sm text-label-sm font-mono text-tertiary" id="dossierClassification">
+              Lawful Intercept / FISA Section 702
+            </div>
+</div>
+<span class="inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full bg-tertiary-container/30 text-tertiary font-label-sm text-label-sm font-semibold shrink-0" id="dossierStatusBadge">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span>
+<span id="dossierStatusText">Verified Lawful</span>
+</span>
+</div>
+<!-- Source File Card with Visual Representation -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Source Document</span>
+<span class="font-label-sm text-label-sm font-mono text-outline" id="dossierFileSize">14.2 MB</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary shrink-0">
+<span class="material-symbols-outlined text-[24px]" id="dossierIcon">description</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-body-sm text-body-sm font-medium text-on-surface font-mono truncate" id="dossierDocName">
+                Wiretap_Transcript_Log_Case408.pdf
+              </span>
+<span class="font-label-sm text-label-sm text-on-surface-variant flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">verified_user</span>
+<span>Original Encrypted PDF Repository</span>
+</span>
+</div>
+</div>
+</div>
+<!-- Hash & Cryptographic Verification Container -->
+<div class="bg-surface-container rounded-lg p-space-sm flex flex-col gap-space-2xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Cryptographic Hash</span>
+<span class="font-label-sm text-label-sm text-tertiary flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[12px]">security</span>
+<span>Tamper-proof</span>
+</span>
+</div>
+<div class="bg-surface-container-lowest rounded p-space-xs font-mono text-label-sm text-on-surface-variant break-all select-all flex items-center justify-between gap-space-xs">
+<span id="dossierHash">SHA-256: 8f2c38da98104ea2f10b00918c5e63412abef090d8194468f742c388279849a1</span>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-1" onclick="navigator.clipboard.writeText(document.getElementById('dossierHash').innerText)" title="Copy Hash">
+<span class="material-symbols-outlined text-[16px]">content_copy</span>
+</button>
+</div>
+</div>
+<!-- Evidentiary Metadata Field Grid -->
+<div class="grid grid-cols-1 gap-space-sm">
+<!-- Page / Record Identifier -->
+<div class="flex flex-col gap-space-2xs bg-surface-container/50 p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Page / Record Location</span>
+<span class="font-mono text-body-sm text-on-surface font-medium" id="dossierRecord">Page 18, Audio Line 22</span>
+</div>
+<!-- Related Entities -->
+<div class="flex flex-col gap-space-2xs bg-surface-container/50 p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Related Entity</span>
+<div class="flex flex-wrap gap-space-xs" id="dossierEntityContainer">
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high font-mono text-body-sm text-primary font-medium flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">person</span>
+<span>David Chen (Target #1)</span>
+</span>
+<span class="px-space-xs py-space-2xs rounded bg-surface-container-high font-mono text-body-sm text-on-surface flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px]">person</span>
+<span>Elena Rostova</span>
+</span>
+</div>
+</div>
+<!-- Extracted Relationship Analysis -->
+<div class="flex flex-col gap-space-2xs bg-surface-container/50 p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium">Extracted Relationship</span>
+<p class="font-body-sm text-body-sm text-on-surface leading-relaxed" id="dossierRelationship">
+              Direct telephonic coordination before offshore wire release. Confirmed match against recorded international VoIP bridge voiceprints.
+            </p>
+</div>
+<!-- Forensic Chain of Custody Stamp -->
+<div class="flex flex-col gap-space-2xs bg-surface-container/50 p-space-sm rounded-lg">
+<span class="font-label-sm text-label-sm text-on-surface-variant uppercase font-medium flex items-center gap-space-2xs">
+<span class="material-symbols-outlined text-[14px] text-tertiary">history_edu</span>
+<span>Chain of Custody Ledger</span>
+</span>
+<span class="font-body-sm text-body-sm text-on-surface font-mono" id="dossierCustody">
+              Ingested by Agent Miller on Aug 14, 2026 at 18:22 EDT
+            </span>
+<div class="flex items-center gap-space-xs font-label-sm text-label-sm text-outline mt-space-2xs">
+<span>Station: Quantico-HQ-Terminal 04</span>
+<span>•</span>
+<span class="text-tertiary">Cryptographically Signed</span>
+</div>
+</div>
+</div>
+<!-- Context Action Buttons -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<!-- Primary View Action -->
+<button class="w-full flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded-lg bg-primary hover:bg-primary-fixed-dim text-on-primary font-body-sm text-body-sm font-semibold transition-all shadow-md">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+<span>View Source Document</span>
+</button>
+<!-- Secondary Verification Action -->
+<button class="w-full flex items-center justify-center gap-space-sm px-space-md py-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-sm text-body-sm font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px] text-tertiary">check_circle</span>
+<span>Verify Status</span>
+</button>
+<!-- Graph Link Action -->
+<a class="w-full flex items-center justify-center gap-space-xs pt-space-2xs pb-space-2xs font-label-sm text-label-sm text-tertiary hover:text-primary transition-colors text-center font-semibold" href="#">
+<span class="material-symbols-outlined text-[16px]">hub</span>
+<span>Cross-Reference in Network Graph</span>
+</a>
+</div>
+</div>
+<!-- Quick Contextual Visual: Evidence Ingestion Timeline Sparkline & Ingestion Spec -->
+<div class="bg-surface-container-low rounded-xl p-space-md flex flex-col gap-space-sm shadow-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold uppercase">Daily Evidence Ingestion Velocity</span>
+<span class="font-label-sm text-label-sm text-tertiary font-mono">+12% vs last wk</span>
+</div>
+<!-- Inline Micro SVG Visualizer (Velocity Histogram) -->
+<div class="w-full h-14 flex items-end justify-between gap-1 pt-2">
+<div class="w-full bg-surface-container hover:bg-primary-container transition-colors rounded-t h-[30%]" title="Aug 10: 3 files"></div>
+<div class="w-full bg-surface-container hover:bg-primary-container transition-colors rounded-t h-[45%]" title="Aug 11: 4 files"></div>
+<div class="w-full bg-surface-container hover:bg-primary-container transition-colors rounded-t h-[20%]" title="Aug 12: 2 files"></div>
+<div class="w-full bg-surface-container hover:bg-primary-container transition-colors rounded-t h-[60%]" title="Aug 13: 6 files"></div>
+<div class="w-full bg-primary-container transition-colors rounded-t h-[90%]" title="Aug 14: 9 files (Wiretap Dump)"></div>
+<div class="w-full bg-surface-container hover:bg-primary-container transition-colors rounded-t h-[50%]" title="Aug 15: 5 files"></div>
+<div class="w-full bg-tertiary transition-colors rounded-t h-[35%]" title="Today: 3 files pending"></div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-label-sm text-outline pt-space-2xs">
+<span>Aug 10</span>
+<span class="font-mono text-tertiary">PEAK: 14 AUG</span>
+<span>Today</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Interactive Selection Logic between Table Rows and Inspector Dossier
+  document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll('.evidence-row');
+    const dossierTitle = document.getElementById('dossierTitle');
+    const dossierClassification = document.getElementById('dossierClassification');
+    const dossierStatusBadge = document.getElementById('dossierStatusBadge');
+    const dossierStatusText = document.getElementById('dossierStatusText');
+    const dossierFileSize = document.getElementById('dossierFileSize');
+    const dossierDocName = document.getElementById('dossierDocName');
+    const dossierHash = document.getElementById('dossierHash');
+    const dossierRecord = document.getElementById('dossierRecord');
+    const dossierRelationship = document.getElementById('dossierRelationship');
+    const dossierCustody = document.getElementById('dossierCustody');
+    const dossierIcon = document.getElementById('dossierIcon');
+    const dossierEntityContainer = document.getElementById('dossierEntityContainer');
+
+    rows.forEach(row => {
+      row.addEventListener('click', () => {
+        // Remove active state styling from all rows
+        rows.forEach(r => {
+          r.classList.remove('bg-surface-container-high/80');
+          const bar = r.querySelector('td:first-child span.w-1\\.5');
+          if (bar) bar.classList.replace('bg-primary', 'bg-transparent');
+          const id = r.querySelector('td:first-child span.font-mono');
+          if (id) id.classList.remove('text-primary');
+        });
+
+        // Apply active state styling
+        row.classList.add('bg-surface-container-high/80');
+        const activeBar = row.querySelector('td:first-child span.w-1\\.5');
+        if (activeBar) activeBar.classList.replace('bg-transparent', 'bg-primary');
+        const activeId = row.querySelector('td:first-child span.font-mono');
+        if (activeId) activeId.classList.add('text-primary');
+
+        // Extract metadata dataset
+        const idVal = row.dataset.id;
+        const typeVal = row.dataset.type;
+        const docVal = row.dataset.doc;
+        const docSizeVal = row.dataset.docSize;
+        const hashVal = row.dataset.hash;
+        const recordVal = row.dataset.record;
+        const entityVal = row.dataset.entity;
+        const relVal = row.dataset.rel;
+        const custodyVal = row.dataset.custody;
+        const statusVal = row.dataset.status;
+        const statusTypeVal = row.dataset.statusType;
+        const classVal = row.dataset.classification;
+
+        // Update Dossier View
+        dossierTitle.textContent = `Evidence Dossier: ${idVal}`;
+        dossierClassification.textContent = classVal || 'Verified Lawful Intercept';
+        dossierFileSize.textContent = docSizeVal || '12.4 MB';
+        dossierDocName.textContent = docVal;
+        dossierHash.textContent = hashVal;
+        dossierRecord.textContent = recordVal;
+        dossierRelationship.textContent = relVal;
+        dossierCustody.textContent = custodyVal;
+
+        // Configure dynamic icon based on evidence type
+        if (typeVal.includes('CDR')) dossierIcon.textContent = 'description';
+        else if (typeVal.includes('Financial')) dossierIcon.textContent = 'table_chart';
+        else if (typeVal.includes('ALPR')) dossierIcon.textContent = 'videocam';
+        else if (typeVal.includes('FIR')) dossierIcon.textContent = 'gavel';
+        else dossierIcon.textContent = 'audio_file';
+
+        // Update Entities View dynamically
+        dossierEntityContainer.innerHTML = '';
+        const entities = entityVal.split(/[,&]/).map(e => e.trim()).filter(Boolean);
+        entities.forEach((entity, idx) => {
+          const pill = document.createElement('span');
+          pill.className = `px-space-xs py-space-2xs rounded bg-surface-container-high font-mono text-body-sm ${idx === 0 ? 'text-primary' : 'text-on-surface'} font-medium flex items-center gap-space-2xs`;
+          pill.innerHTML = `<span class="material-symbols-outlined text-[14px]">person</span><span>${entity}</span>`;
+          dossierEntityContainer.appendChild(pill);
+        });
+
+        // Update Status Badge Colors & Label
+        dossierStatusBadge.className = 'inline-flex items-center gap-space-2xs px-space-xs py-space-2xs rounded-full font-label-sm text-label-sm font-semibold shrink-0';
+        if (statusTypeVal === 'green') {
+          dossierStatusBadge.classList.add('bg-tertiary-container/30', 'text-tertiary');
+          dossierStatusBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-tertiary"></span><span>Verified Lawful</span>`;
+        } else if (statusTypeVal === 'amber') {
+          dossierStatusBadge.classList.add('bg-secondary-container/40', 'text-secondary');
+          dossierStatusBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span>Pending Review</span>`;
+        } else {
+          dossierStatusBadge.classList.add('bg-surface-container-highest', 'text-on-surface-variant');
+          dossierStatusBadge.innerHTML = `<span class="w-1.5 h-1.5 rounded-full bg-outline"></span><span>Unverified Artifact</span>`;
+        }
+      });
+    });
+
+    // Filter Pill Interaction
+    const filterPills = document.querySelectorAll('.filter-pill');
+    filterPills.forEach(pill => {
+      pill.addEventListener('click', () => {
+        filterPills.forEach(p => {
+          p.classList.remove('bg-primary-container', 'text-on-primary', 'shadow-sm');
+          p.classList.add('text-on-surface-variant', 'bg-surface-container/40');
+        });
+        pill.classList.remove('text-on-surface-variant', 'bg-surface-container/40');
+        pill.classList.add('bg-primary-container', 'text-on-primary', 'shadow-sm');
+
+        const filterVal = pill.dataset.filter.toLowerCase();
+        rows.forEach(r => {
+          const type = r.dataset.type.toLowerCase();
+          if (filterVal === 'all') {
+            r.style.display = '';
+          } else if (filterVal === 'fir' && type.includes('fir')) {
+            r.style.display = '';
+          } else if (filterVal === 'cdr' && type.includes('cdr')) {
+            r.style.display = '';
+          } else if (filterVal === 'financial' && type.includes('financial')) {
+            r.style.display = '';
+          } else if (filterVal === 'other' && (type.includes('other') || type.includes('alpr') || type.includes('encrypted'))) {
+            r.style.display = '';
+          } else {
+            r.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Search Filtering
+    const searchInput = document.getElementById('evidenceSearch');
+    searchInput.addEventListener('input', (e) => {
+      const q = e.target.value.toLowerCase().trim();
+      rows.forEach(r => {
+        const text = r.innerText.toLowerCase();
+        const hash = (r.dataset.hash || '').toLowerCase();
+        if (text.includes(q) || hash.includes(q)) {
+          r.style.display = '';
+        } else {
+          r.style.display = 'none';
+        }
+      });
+    });
+  });
+</script></main></div></body></html>
